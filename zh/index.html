@@ -24,6 +24,9 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{font-family:"Pretendard","PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg);font-size:17px;line-height:1.7;word-break:normal;line-break:strict;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,li,td,th,span,a,b,div,small{text-wrap-style:pretty}
+.nw,.card p span.nw,.st p span.nw{display:inline;white-space:nowrap}
+td:first-child,th:first-child,td:last-child,th:last-child{white-space:nowrap}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;height:auto;display:block}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
@@ -108,6 +111,7 @@ footer .wrap>a{justify-self:end}
 @media(max-width:600px){.motto-en .s{display:block}}
 .langs{margin-left:14px;font-size:14px;color:var(--faint);white-space:nowrap}.langs a{margin:0!important}.langs b{color:#fff}
 .ln,.card p span{white-space:normal}
+.dim{color:var(--faint)}
 </style>
 </head>
 <body>
@@ -123,7 +127,7 @@ footer .wrap>a{justify-self:end}
   <h1 class="motto-ko"><span>一件不失，</span> <span>合而为一，</span> <span><b>唯一之物，存入保险库</b></span></h1>
   <p class="motto-en" lang="en"><span class="s">Lose none.</span> <span class="s">Keep one.</span> <span class="s">Vault the only <b class="one">ONE!</b></span></p>
   <p class="motto-hj" lang="ko-Hani">無一失 · 合爲一 · 唯一入庫</p>
-  <p class="lead"><span class="ln">查找分散的数字资产，梳理应保留哪些以及如何管理。</span><span class="ln">数字保险库仅属于用户（客户）本人。</span></p>
+  <p class="lead"><span class="ln">查找分散的<span class="nw">数字资产</span>，梳理应保留哪些以及如何管理。</span><span class="ln">数字保险库仅属于用户<span class="dim">（客户）</span>本人。</span></p>
   <div class="cta"><a class="btn p" href="https://hiven.co.kr/#download">下载 Hi Coffer AI Agent</a><a class="btn g" href="#service">查看服务</a></div>
 </div></section>
 
@@ -132,7 +136,7 @@ footer .wrap>a{justify-self:end}
   <h2>三句话的含义</h2>
   <p class="lead"><span class="ln">通过对实际 PC·笔记本电脑（设备）及与其连接的所有外部装置（存储介质）进行整理/处置的实证，遵守标准·公共/法定指南与规制。</span></p>
   <div class="grid g3 motto3">
-    <div class="card"><h3>一件不失</h3><div class="en" lang="en">Lose none.</div><p><span>不丢失原件。</span><span>在整理/处置前对内容与状态进行比对/验证。</span><span>所有状态均可随时恢复。（有效）</span></p></div>
+    <div class="card"><h3>一件不失</h3><div class="en" lang="en">Lose none.</div><p><span>不丢失原件。</span><span>在整理/处置前对内容与状态<span class="nw">进行比对/验证</span>。</span><span>所有状态均可随时恢复。（有效）</span></p></div>
     <div class="card"><h3>合而为一</h3><div class="en" lang="en">Keep one.</div><p><span>即使看起来相同，也会判读至内容层面。</span><span>对混杂的数据进行整合。</span><span>确定唯一的正本。（唯一）</span></p></div>
     <div class="card"><h3>唯一之物，存入保险库</h3><div class="en" lang="en">Vault the only one.</div><p><span>识别/找出隐藏的资产。</span><span>仅将选定的资产保存至保险库。</span><span>保险库仅由用户控制。（遗产）</span></p></div>
   </div>
@@ -141,13 +145,13 @@ footer .wrap>a{justify-self:end}
 <section class="sec alt" id="service"><div class="wrap">
   <div class="kicker">Service</div>
   <h2>Hi Coffer 的工作</h2>
-  <p class="lead"><span class="ln">查找数字资产（识别），决定将哪些内容（区分）放入保险库（甄别），以及如何保存（管理·维护）（保险库化）。</span><span class="ln">数字保险库直接 · 间接地保护用户的数字资产，并使其能够被安全地使用。</span></p>
+  <p class="lead"><span class="ln">查找<span class="nw">数字资产</span>（识别），决定将哪些内容（区分）放入保险库（甄别），以及如何保存（管理·维护）（保险库化）。</span><span class="ln">数字保险库直接 · 间接地保护用户的<span class="nw">数字资产</span>，并使其能够被安全地使用。</span></p>
   <div class="steps">
     <div class="st"><b class="n">1</b><h3>识别</h3><p>确认与设备连接的存储介质 · 装置中文件夹及文件的数量/容量/属性以及装置状态。</p></div>
     <div class="st"><b class="n">2</b><h3>区分</h3><p>按照文件的性质与类型将其划分为标准分类。</p></div>
-    <div class="st"><b class="n">3</b><h3>甄别</h3><p>甄别重复·旧版本·正本候选·敏感资料的位置。</p></div>
-    <div class="st"><b class="n">4</b><h3>管理·维护</h3><p>具有有害属性（钓鱼/诱饵/受污染）以及遗失/损坏的文件先被隔离，再由用户进行验证/处置。</p></div>
-    <div class="st"><b class="n">5</b><h3>保险库化</h3><p>仅对用户选择/选定的数字资产（数据/信息）进行加密/原件指纹处理（SHA-256）后保存。<br>※ 保险库密钥仅由用户本人持有/保管。</p></div>
+    <div class="st"><b class="n">3</b><h3>甄别</h3><p>找出重复·旧版本·正本候选·敏感资料的位置。</p></div>
+    <div class="st"><b class="n">4</b><h3>管理·维护</h3><p>具有有害属性（钓鱼/诱饵/受污染）以及<span class="nw">遗失</span>/<span class="nw">损失</span>的文件先被隔离，再由用户<span class="nw">进行验证/处置</span>。</p></div>
+    <div class="st"><b class="n">5</b><h3>保险库化</h3><p>仅对用户选择/选定的<span class="nw">数字资产</span>（<span class="nw">数据</span>/<span class="nw">信息</span>）进行加密/原件指纹处理<span class="nw">（SHA-256）</span>后保存。<br>※ 保险库密钥仅由用户本人持有/保管。</p></div>
   </div>
   <div class="grid g3">
     <div class="card"><h3>管理基础 · Hi DAM</h3><p><span>数字资产管理标准分类体系。</span><span>将资产的分类·属性·履历在所有设备上</span><span>以相同（统一）的体系进行管理。</span></p></div>
@@ -159,7 +163,7 @@ footer .wrap>a{justify-self:end}
 <section class="sec" id="agent"><div class="wrap">
   <div class="kicker">Hi Coffer AI Agent</div>
   <h2>代理的作用</h2>
-  <p class="lead"><span class="ln">Hi Coffer AI Agent</span><span class="ln">安装于 PC·笔记本电脑，依据标准分类体系管理设备与装置·介质。</span><span class="ln">对数字资产与数字保险库进行全面、同步的管理。</span></p>
+  <p class="lead"><span class="ln">Hi Coffer AI Agent</span><span class="ln">安装于 PC·笔记本电脑，依据标准分类体系管理设备与装置·介质。</span><span class="ln">对<span class="nw">数字资产</span>与数字保险库进行全面、同步的管理。</span></p>
   <div class="arch">
     <div class="lab">界面（用户）</div>
     <div class="row"><div class="box">选择规则/体系（Hi DAM） · 执行前预测 · 批准 · 隔离/处置 · 撤销（恢复）</div></div>
@@ -174,7 +178,7 @@ footer .wrap>a{justify-self:end}
     </div>
     <div class="lab" style="margin-top:18px">连接对象</div>
     <div class="row" style="display:grid;grid-template-columns:repeat(3,1fr)">
-      <div class="box">PC·笔记本电脑（设备）<small>运行 AI Agent 应用的系统</small><small>* 数字资产管理·恢复（免费）</small></div>
+      <div class="box">PC·笔记本电脑（设备）<small>运行 AI Agent 应用的系统</small><small>* <span class="nw">数字资产</span>管理·恢复（免费）</small></div>
       <div class="box">外置硬盘·USB·存储卡（存储介质/装置）<small>各介质按统一的识别·区分及处理方式进行管理</small><small>* Hi DAM · 订阅（定期）</small></div>
       <div class="box">云端·手机（移动端）<small>* 多渠道·异构设备间同步 · 订阅（特定）</small></div>
     </div>
@@ -203,13 +207,13 @@ footer .wrap>a{justify-self:end}
 <section class="sec" id="plan"><div class="wrap">
   <div class="kicker">Subscription</div>
   <h2>订阅平台</h2>
-  <p class="lead"><span class="ln">Hi Coffer 高效·有效地管理用户的数字资产。</span><span class="ln">任何人无需注册会员即可使用，我们将守护您的数字资产。</span></p>
+  <p class="lead"><span class="ln">Hi Coffer 高效·有效地管理用户的<span class="nw">数字资产</span>。</span><span class="ln">任何人无需注册会员即可使用，我们将守护您的<span class="nw">数字资产</span>。</span></p>
   <table>
     <thead><tr><th>类别</th><th>提供内容</th><th>形式</th></tr></thead>
     <tbody>
       <tr><td><b>试用版</b></td><td>测试(β)版</td><td>免费</td></tr>
-      <tr><td><b>商用版</b></td><td>数字资产管理及报告<br>不包含保险库·Hi DAM 管理功能</td><td>免费</td></tr>
-      <tr><td><b>订阅（定期）</b></td><td>应用标准分类体系（Hi DAM）的资产管理<br>数字保险库服务平台</td><td>付费</td></tr>
+      <tr><td><b>商用版</b></td><td><span class="nw">数字资产</span>管理及报告<br>不包含保险库·Hi DAM 管理功能</td><td>免费</td></tr>
+      <tr><td><b>订阅（定期）</b></td><td>应用标准分类体系（Hi DAM）的<span class="nw">资产管理</span><br>数字保险库服务平台</td><td>付费</td></tr>
       <tr><td><b>订阅（特定）</b></td><td>基于区块链的原件证明</td><td>付费</td></tr>
     </tbody>
   </table>
@@ -231,7 +235,7 @@ footer .wrap>a{justify-self:end}
 
 <section class="sec dl" id="download"><div class="wrap">
   <h2>Hi Coffer AI Agent</h2>
-  <p class="lead"><span class="ln">HIVEN 为用户数字资产提供保护与权益保障。</span></p>
+  <p class="lead"><span class="ln">HIVEN 为用户<span class="nw">数字资产</span>提供保护与权益保障。</span></p>
   <div class="cta"><a class="btn p" href="https://hiven.co.kr/">hiven.co.kr</a></div>
 </div></section>
 </main>
