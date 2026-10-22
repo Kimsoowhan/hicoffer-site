@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hi Coffer AI</title>
+<meta name="description" content="Hi Coffer は、散在するデジタル資産を見つけて整理し、ユーザーが選んだものだけを金庫に保管するデジタル金庫です。Hi Coffer AI Agent の構成・作業方式・サービス・サブスクリプション構造をご案内します。">
+<link rel="icon" href="../assets/img/favicon.png">
+<link rel="alternate" hreflang="ko" href="https://hicoffer.ai/">
+<link rel="alternate" hreflang="en" href="https://hicoffer.ai/en/">
+<link rel="alternate" hreflang="ru" href="https://hicoffer.ai/ru/">
+<link rel="alternate" hreflang="zh-Hans" href="https://hicoffer.ai/zh/">
+<link rel="alternate" hreflang="ja" href="https://hicoffer.ai/ja/">
+<link rel="alternate" hreflang="x-default" href="https://hicoffer.ai/">
+<style>
+@font-face{font-family:"HanjaMotto";font-weight:400 800;font-display:swap;src:url(../assets/fonts/hanja-motto.woff2) format("woff2")}
+@font-face{font-family:"Pretendard";font-weight:400;font-display:swap;src:url(../assets/fonts/Pretendard-Regular.woff2) format("woff2")}
+@font-face{font-family:"Pretendard";font-weight:600;font-display:swap;src:url(../assets/fonts/Pretendard-SemiBold.woff2) format("woff2")}
+@font-face{font-family:"Pretendard";font-weight:700;font-display:swap;src:url(../assets/fonts/Pretendard-Bold.woff2) format("woff2")}
+@font-face{font-family:"Pretendard";font-weight:800;font-display:swap;src:url(../assets/fonts/Pretendard-ExtraBold.woff2) format("woff2")}
+:root{--navy:#10184A;--ink:#1A1F36;--sub:#4A5070;--faint:#7A8099;--line:#E3E6F0;--bg:#fff;--bg2:#F5F7FC;--c1:#088CF5;--c2:#2343D7;--c3:#7711FC;--grad:linear-gradient(120deg,var(--c1),var(--c2) 55%,var(--c3));--w:1120px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#E6E9F5;--sub:#B4BAD3;--faint:#8A90AA;--line:#2A3160;--bg:#0B1036;--bg2:#121947}}
+:root[data-theme="dark"]{--ink:#E6E9F5;--sub:#B4BAD3;--faint:#8A90AA;--line:#2A3160;--bg:#0B1036;--bg2:#121947}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:"Pretendard","Hiragino Sans","Yu Gothic","Meiryo","Noto Sans JP",system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg);font-size:17px;line-height:1.7;word-break:normal;line-break:strict;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+.top{position:sticky;top:0;z-index:10;background:rgba(16,24,74,.94);backdrop-filter:blur(10px);color:#fff}
+.top-in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px}
+.brand img{height:30px;width:30px}
+nav{display:flex;gap:24px;font-size:15px;font-weight:600;color:#C9D2F5}
+nav a:hover{color:#fff}
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;text-align:center}
+.hero:before{content:"";position:absolute;inset:auto -10% -40% 40%;height:120%;background:radial-gradient(closest-side,rgba(119,17,252,.32),transparent);pointer-events:none}
+.hero-in{position:relative;padding:88px 24px 96px}
+.halo{position:relative;display:block;width:100%;max-width:240px;margin:0 auto 40px}
+.halo img{position:relative;z-index:1;width:100%;filter:drop-shadow(0 20px 60px rgba(8,140,245,.35))}
+.halo:before,.halo:after{content:"";position:absolute;pointer-events:none;z-index:0;border-radius:50%}
+.halo:before{inset:-45%;background:radial-gradient(closest-side,rgba(120,190,255,.30),rgba(8,140,245,.19) 30%,rgba(35,67,215,.11) 56%,rgba(119,17,252,.05) 80%,rgba(119,17,252,0) 100%)}
+.halo:after{inset:-70%;background:repeating-conic-gradient(from 6deg,rgba(170,200,255,.08) 0deg 4deg,rgba(170,200,255,0) 4deg 16deg);-webkit-mask:radial-gradient(closest-side,#000 20%,rgba(0,0,0,.4) 46%,transparent 88%);mask:radial-gradient(closest-side,#000 20%,rgba(0,0,0,.4) 46%,transparent 88%);filter:blur(6px)}
+.halo{isolation:isolate}
+.halo:after{z-index:-1}
+/* symbol backdrop disc layer */
+.halo:before{background:radial-gradient(closest-side,rgba(3,5,22,.82) 36%,rgba(3,5,22,.55) 46%,rgba(3,5,22,0) 56%),radial-gradient(closest-side,rgba(120,190,255,.30),rgba(8,140,245,.19) 30%,rgba(35,67,215,.11) 56%,rgba(119,17,252,.05) 80%,rgba(119,17,252,0) 100%)}
+@media (max-width:600px){.card p span{white-space:normal}.st{grid-template-columns:44px 1fr}.st p{grid-column:2}.halo{max-width:150px}}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#9FB4FF}
+.motto-ko{margin-top:22px;font-size:46px;line-height:1.3;font-weight:800;letter-spacing:-.01em}
+.motto-ko span{display:inline-block}
+.motto-ko b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.motto-en{margin-top:18px;font-size:24px;font-weight:600;color:#C9D2F5}
+.motto-hj{margin-top:10px;font-size:24px;font-weight:600;color:#9FB4FF;letter-spacing:.12em;font-family:"Pretendard","HanjaMotto",sans-serif}
+.hero p.lead{margin:30px auto 0;max-width:36em;color:#C9D2F5;font-size:18px}
+.cta{display:flex;gap:12px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;height:48px;padding:0 24px;border-radius:999px;font-weight:700}
+.btn.p{background:var(--grad);color:#fff}
+.btn.g{border:1px solid rgba(255,255,255,.4);color:#fff}
+.sec{padding:88px 0}
+.sec.alt{background:var(--bg2)}
+.kicker{font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--c1);margin-bottom:10px}
+h2{font-size:32px;line-height:1.3;font-weight:800}
+h3{font-size:19px;font-weight:700}
+.lead{margin-top:14px;font-size:18px;color:var(--sub)}.ln{display:block;white-space:nowrap}
+.grid{display:grid;gap:18px;margin-top:36px}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:24px}
+.sec.alt .card{background:var(--bg)}
+.card p{margin-top:8px;color:var(--sub);font-size:16px}.card p span{display:block;white-space:nowrap}
+.card b.n{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--grad);color:#fff;align-items:center;justify-content:center;font-size:15px;margin-bottom:12px}
+
+.motto3 .card p{margin-top:14px}.motto3 .card .en{color:var(--c2);font-weight:600;font-size:16px;margin-top:2px}
+.steps{margin-top:36px;border-top:1px solid var(--line)}.st{display:grid;grid-template-columns:44px 96px 1fr;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}.st .n{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--grad);color:#fff;align-items:center;justify-content:center;font-size:16px}.st p{color:var(--sub);font-size:16px}
+.flow{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:32px;counter-reset:s}
+.flow li{border:1px solid var(--line);border-radius:12px;padding:14px;font-size:16px;background:var(--bg)}
+.flow li:before{counter-increment:s;content:counter(s);display:block;font-weight:800;color:var(--c2);font-size:18px}
+.flow li.v{border-color:var(--c3)}
+.note{margin-top:14px;font-size:14px;color:var(--faint)}
+.arch{margin-top:36px;border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--bg)}
+.arch .row{display:grid;gap:12px;margin-top:12px}
+.arch .lab{font-size:14px;font-weight:700;color:var(--faint);letter-spacing:.08em}
+.box{border-radius:10px;padding:12px 14px;font-size:16px;border:1px solid var(--line)}
+.box.core{background:var(--grad);color:#fff;border:0;font-weight:700;text-align:center}
+.box small{display:block;color:var(--sub);font-size:14px}
+.box.core small{color:#E8ECFF}
+table{width:100%;border-collapse:collapse;margin-top:32px;font-size:16px}
+th,td{border-bottom:1px solid var(--line);padding:14px 12px;text-align:left;vertical-align:top}
+th{font-size:14px;color:var(--faint);font-weight:700}
+td b{color:var(--ink)}
+.tag{display:inline-block;font-size:12.5px;font-weight:700;padding:2px 10px;border-radius:999px;border:1px solid var(--c2);color:var(--c2);margin-left:6px;vertical-align:2px}
+.ticks{list-style:none;margin-top:10px}
+.ticks li{padding-left:22px;position:relative;margin-top:6px;color:var(--sub);font-size:16px}
+.ticks li:before{content:"";position:absolute;left:4px;top:.7em;width:8px;height:8px;border-radius:50%;background:var(--grad)}
+.dl{background:var(--navy);color:#fff;text-align:center}
+.dl h2{color:#fff}.dl .lead{color:#C9D2F5;margin-left:auto;margin-right:auto}
+footer{padding:36px 0;font-size:14px;color:var(--faint);border-top:1px solid var(--line)}
+footer .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+footer .fm{font-size:21px;font-weight:700;text-align:center}
+footer .wrap>a{justify-self:end}
+@media(max-width:600px){footer .wrap{grid-template-columns:1fr;justify-items:center;text-align:center}footer .wrap>a{justify-self:center}}
+@media (max-width:900px){.g4,.g5{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:repeat(3,1fr)}nav{display:none}}
+@media (max-width:600px){.card p span{white-space:normal}.st{grid-template-columns:44px 1fr}.st p{grid-column:2}.wrap{padding:0 16px}.g3,.g4,.g5{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.motto-ko{font-size:32px}.motto-en,.motto-hj{font-size:18px}h2{font-size:26px}.sec{padding:64px 0}table{font-size:14px}th,td{padding:10px 6px}}
+@media (max-width:1100px){.ln,.card p span{white-space:normal}}
+@media (max-width:600px){.arch .row{grid-template-columns:1fr !important}}
+.motto-en .one{font-size:2em;font-weight:800;color:#7fe3ff;line-height:1;vertical-align:-.12em}
+@media(max-width:600px){.motto-en .s{display:block}}
+.langs{margin-left:14px;font-size:14px;color:var(--faint);white-space:nowrap}.langs a{margin:0!important}.langs b{color:#fff}
+.ln,.card p span{white-space:normal}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap top-in">
+  <a class="brand" href="#top"><img src="../assets/img/hiven-symbol.webp" alt="">Hi Coffer AI</a>
+  <nav><a href="#motto">モットー</a><a href="#service">サービス</a><a href="#agent">エージェント</a><a href="#how">管理体系</a><a href="#plan">サブスクリプション</a><a href="#road">スケジュール</a><a href="#download">ダウンロード</a></nav><span class="langs"><a href="/" hreflang="ko" lang="ko">한글</a> · <a href="/en/" hreflang="en" lang="en">EN</a> · <a href="/ru/" hreflang="ru" lang="ru">РУ</a> · <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a> · <b>日本</b></span>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="hero-in">
+  <span class="halo" aria-hidden="true"><img src="../assets/img/hiven-symbol.webp" alt="" width="320" height="320"></span>
+  <div class="eyebrow">Hi Coffer · Digital Vault</div>
+  <h1 class="motto-ko"><span>一つも失わず、</span> <span>一つにまとめ、</span> <span><b>唯一のものは金庫へ</b></span></h1>
+  <p class="motto-en" lang="en"><span class="s">Lose none.</span> <span class="s">Keep one.</span> <span class="s">Vault the only <b class="one">ONE!</b></span></p>
+  <p class="motto-hj" lang="ko-Hani">無一失 · 合爲一 · 唯一入庫</p>
+  <p class="lead"><span class="ln">散在するデジタル資産を見つけ出し、何を残し、どう管理するかを整理します。</span><span class="ln">デジタル金庫はユーザー（お客様）だけのものです。</span></p>
+  <div class="cta"><a class="btn p" href="https://hiven.co.kr/#download">Hi Coffer AI Agent をダウンロード</a><a class="btn g" href="#service">サービスを見る</a></div>
+</div></section>
+
+<section class="sec" id="motto"><div class="wrap">
+  <div class="kicker">Motto</div>
+  <h2>三つの句の意味</h2>
+  <p class="lead"><span class="ln">実際の PC・ノートパソコン（機器）と接続されるすべての外部装置（記憶媒体）間の整理/措置の実証により、標準・公共/法的指針・規制を遵守します。</span></p>
+  <div class="grid g3 motto3">
+    <div class="card"><h3>一つも失わず</h3><div class="en" lang="en">Lose none.</div><p><span>原本を失いません。</span><span>整理/措置の前に内容と状態を照合/検証します。</span><span>すべての状態をいつでも元に戻せます。（有効）</span></p></div>
+    <div class="card"><h3>一つにまとめ</h3><div class="en" lang="en">Keep one.</div><p><span>同一に見えても内容まで判読します。</span><span>混在したデータを整合します。</span><span>一つの真正版を確定します。（唯一）</span></p></div>
+    <div class="card"><h3>唯一のものは金庫へ</h3><div class="en" lang="en">Vault the only one.</div><p><span>隠れた資産を識別/発見します。</span><span>選定された資産のみを金庫に保管します。</span><span>金庫はユーザーだけが管理します。（遺産）</span></p></div>
+  </div>
+</div></section>
+
+<section class="sec alt" id="service"><div class="wrap">
+  <div class="kicker">Service</div>
+  <h2>Hi Coffer が行うこと</h2>
+  <p class="lead"><span class="ln">デジタル資産を見つけ出し（識別）、何を（区分）金庫に入れ（選別）、どのように保管（管理・維持）するかを決定（金庫化）します。</span><span class="ln">デジタル金庫は、ユーザーのデジタル資産を直接 · 間接的に保護し、安全に活用できるようにします。</span></p>
+  <div class="steps">
+    <div class="st"><b class="n">1</b><h3>識別</h3><p>機器に接続された記憶媒体 · 装置のフォルダおよびファイルの数/容量/属性と装置の状態を確認します。</p></div>
+    <div class="st"><b class="n">2</b><h3>区分</h3><p>ファイルを性質と種類に応じて標準分類に分けます。</p></div>
+    <div class="st"><b class="n">3</b><h3>選別</h3><p>重複・旧バージョン・真正版候補・機密資料の所在を見分けます。</p></div>
+    <div class="st"><b class="n">4</b><h3>管理・維持</h3><p>有害な属性（フィッシング/おとり/汚染）のものや紛失/損失したものは隔離した後、ユーザーが検証/措置します。</p></div>
+    <div class="st"><b class="n">5</b><h3>金庫化</h3><p>ユーザーが選択/選定したデジタル資産（データ/情報）のみを暗号化/原本フィンガープリント処理（SHA-256）して保管します。<br>※ 金庫キーはユーザーのみが所有/保管します。</p></div>
+  </div>
+  <div class="grid g3">
+    <div class="card"><h3>管理基盤 · Hi DAM</h3><p><span>デジタル資産管理の標準分類体系です。</span><span>資産の分類・属性・履歴をすべてのデバイスで</span><span>同じ（同一の）体系で管理します。</span></p></div>
+    <div class="card"><h3>デジタル金庫</h3><p><span>ユーザーが選んだ資産のみを保管します。</span><span>原本確認（フィンガープリント）と閲覧記録を残します。</span></p></div>
+    <div class="card"><h3>対象</h3><p><span>個人・家族から始めます。</span><span>企業、公共機関へと広げていきます。</span></p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="agent"><div class="wrap">
+  <div class="kicker">Hi Coffer AI Agent</div>
+  <h2>エージェントの役割</h2>
+  <p class="lead"><span class="ln">Hi Coffer AI Agent は</span><span class="ln">PC・ノートパソコンにインストールされ、機器と装置・媒体を標準分類体系に基づいて管理します。</span><span class="ln">デジタル資産とデジタル金庫を総合的かつ同時に管理します。</span></p>
+  <div class="arch">
+    <div class="lab">画面（ユーザー）</div>
+    <div class="row"><div class="box">ルール/体系（Hi DAM）の選択 · 実行前予測 · 承認 · 隔離/措置 · 元に戻す（復元）</div></div>
+    <div class="lab" style="margin-top:18px">Hi Coffer AI Agent = Hi DAM + デジタル金庫</div>
+    <div class="row g3" style="display:grid;grid-template-columns:repeat(3,1fr)">
+      <div class="box core">収集・目録化<small>全数目録 · 装置識別</small></div>
+      <div class="box core">分類・自動整理<small>標準体系 · AI 提案</small></div>
+      <div class="box core">照合・検索<small>追加・変更・移動・欠落</small></div>
+      <div class="box core">金庫<small>暗号化保管 · 原本/真正版確認</small></div>
+      <div class="box core">台帳・履歴<small>すべての変更をハッシュチェーンで記録</small></div>
+      <div class="box core">元の構造/形態の保存<small>最初の構造を記録して元に戻す（復元）</small></div>
+    </div>
+    <div class="lab" style="margin-top:18px">接続先</div>
+    <div class="row" style="display:grid;grid-template-columns:repeat(3,1fr)">
+      <div class="box">PC・ノートパソコン（機器）<small>AI Agent アプリが動作するシステム</small><small>* デジタル資産の管理・復元（無料）</small></div>
+      <div class="box">外付けディスク・USB・メモリーカード（記憶媒体/装置）<small>媒体ごとに同一の識別・区分および処理による管理</small><small>* Hi DAM · サブスクリプション（定期）</small></div>
+      <div class="box">クラウド・携帯電話（モバイル）<small>* マルチチャネル・異機種間の同期 · サブスクリプション（特定）</small></div>
+    </div>
+  </div>
+  <p class="note"><span class="ln">装置・媒体はドライブ文字ではなく、ボリュームシリアル番号で区別されます。</span><span class="ln">媒体を取り外した後も、PC に残した目録の写しで探すことができます。</span></p>
+</div></section>
+
+<section class="sec alt" id="how"><div class="wrap">
+  <div class="kicker">How it works</div>
+  <h2>管理体系</h2>
+  <p class="lead"><span class="ln">1～6段階は診断、7～12段階は実行・管理・金庫です。</span><span class="ln">すべての過程はユーザーの確認と決定・承認に従い、原本の保全・復旧を前提とします。</span></p>
+  <ol class="flow">
+    <li>インストール・同意</li><li>装置登録</li><li>識別スキャン<br><small>読み取り専用</small></li><li>選別分析<br><small>内容フィンガープリント</small></li><li>区分（分類）</li><li>診断レポート</li>
+    <li>ユーザー決定</li><li>整理実行<br><small>再確認 → 隔離</small></li><li>確認・廃棄</li><li>管理・維持<br><small>定期点検</small></li><li class="v">金庫化<br><small>選択</small></li><li class="v">活用<br><small>閲覧・提出用</small></li>
+  </ol>
+  <div class="grid g3">
+    <div class="card"><h3>自分の PC 内で処理</h3><p><span>ファイルの内容はユーザーの PC で処理します。</span><span>ファイルの内容をサーバーに送信しません。</span></p></div>
+    <div class="card"><h3>すぐには削除しない</h3><p><span>隔離 → ユーザー確認 → 削除の順序です。</span><span>完全削除はユーザーのみが行えます。</span></p></div>
+    <div class="card"><h3>元に戻す</h3><p><span>すべての変更は実行前・後に記録されます。</span><span>最初の構造に戻すことができます。</span></p></div>
+    <div class="card"><h3>保護領域に触れない</h3><p><span>インストールファイル・公認認証書・システム領域は</span><span>整理対象から除外します。</span></p></div>
+    <div class="card"><h3>ユーザーが定めた役割を優先</h3><p><span>ユーザーが定めた装置の役割が</span><span>整理ルールより優先されます。</span></p></div>
+    <div class="card"><h3>AI は提案のみ</h3><p><span>AI の判定は根拠とともに提案として表示します。</span><span>実行するかどうかはユーザーが決めます。</span></p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="plan"><div class="wrap">
+  <div class="kicker">Subscription</div>
+  <h2>サブスクリプションプラットフォーム</h2>
+  <p class="lead"><span class="ln">Hi Coffer はユーザーのデジタル資産を効率的・効果的に管理します。</span><span class="ln">どなたでも会員登録なしで利用でき、デジタル資産をお守りします。</span></p>
+  <table>
+    <thead><tr><th>区分</th><th>提供内容</th><th>形態</th></tr></thead>
+    <tbody>
+      <tr><td><b>試用版</b></td><td>ベータ(β)版</td><td>無料</td></tr>
+      <tr><td><b>商用版</b></td><td>デジタル資産の管理およびレポーティング<br>金庫・Hi DAM 管理機能は含まれません</td><td>無料</td></tr>
+      <tr><td><b>サブスクリプション（定期）</b></td><td>標準分類体系（Hi DAM）を適用した資産管理<br>デジタル金庫サービスプラットフォーム</td><td>有料</td></tr>
+      <tr><td><b>サブスクリプション（特定）</b></td><td>ブロックチェーンによる原本証明</td><td>有料</td></tr>
+    </tbody>
+  </table>
+  <ul class="ticks">
+    <li>HIVEN が供給・提供します。</li>
+  </ul>
+</div></section>
+
+<section class="sec alt" id="road"><div class="wrap">
+  <div class="kicker">Roadmap</div>
+  <h2>配布スケジュール</h2>
+  <div class="grid g3">
+    <div class="card"><h3>第1次 · <span class="tag">2026年内</span></h3><p><span>Windows PC 向けベータ(β)版</span><span>全機能を無料でご利用いただけます。</span></p></div>
+    <div class="card"><h3>第2次 · <span class="tag">2027年初め</span></h3><p><span>Android OS 向けモバイルベータ(β)版</span><span>PC との連携を検討します。</span></p></div>
+    <div class="card"><h3>第3次 · <span class="tag">別途告知</span></h3><p><span>デジタル金庫サブスクリプション · 有料化移行時点以降（予定）</span></p></div>
+  </div>
+  <p class="note"><span class="ln">配布スケジュールは安定性（Test-bed）の検証後に告知します。</span></p>
+</div></section>
+
+<section class="sec dl" id="download"><div class="wrap">
+  <h2>Hi Coffer AI Agent</h2>
+  <p class="lead"><span class="ln">ユーザーのデジタル資産の保護と権利を HIVEN が提供します。</span></p>
+  <div class="cta"><a class="btn p" href="https://hiven.co.kr/">hiven.co.kr</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 HIVEN · HIVE-Group</span><span class="fm">Hi Coffer · Hi DAM</span><a href="https://hiven.co.kr/">hiven.co.kr</a></div></footer>
+</body>
+</html>
