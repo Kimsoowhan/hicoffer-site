@@ -107,22 +107,27 @@ footer .wrap>a{justify-self:end}
 .motto-en .one{font-size:2em;font-weight:800;color:#7fe3ff;line-height:1;vertical-align:-.12em}
 @media(max-width:600px){.motto-en .s{display:block}}
 .langs{margin-left:14px;font-size:14px;color:var(--faint);white-space:nowrap}.langs a{margin:0!important}.langs b{color:#fff}
+/* Latin/Cyrillic layout: allow natural wrapping (Korean-only nowrap line splits) */
+.ln,.card p span{white-space:normal}.st{grid-template-columns:44px 230px 1fr}.flow li,.box,h3{overflow-wrap:break-word;hyphens:auto}
+@media (max-width:600px){.st{grid-template-columns:44px 1fr}}
+p,.ln,.card p span,li,small,.box,td{text-wrap:pretty}h1,h2,h3{text-wrap:balance}
+.dim{color:var(--faint)}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap top-in">
   <a class="brand" href="#top"><img src="../assets/img/hiven-symbol.webp" alt=""><span class="bt">Hi Coffer <span class="nw">AI Agent</span></span></a>
-  <nav><a href="#motto">Motto</a><a href="#service">Service</a><a href="#agent">Agent</a><a href="#how">Management</a><a href="#plan">Plans</a><a href="#road">Roadmap</a><a href="#download">Download</a></nav><span class="langs"><a href="/" hreflang="ko" lang="ko">한글</a> · <b>EN</b> · <a href="/ru/" hreflang="ru" lang="ru">РУ</a> · <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a> · <a href="/ja/" hreflang="ja" lang="ja">日本</a></span>
+  <nav><a href="#motto">Motto</a><a href="#service">Service</a><a href="#agent">Agent</a><a href="#how">Management</a><a href="#plan">Plans</a><a href="#road">Roadmap</a><a href="#download">Download</a></nav><span class="langs"><a href="/" hreflang="ko" lang="ko">한글</a>&nbsp;· <b>EN</b>&nbsp;· <a href="/ru/" hreflang="ru" lang="ru">РУ</a>&nbsp;· <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a>&nbsp;· <a href="/ja/" hreflang="ja" lang="ja">日本</a></span>
 </div></header>
 
 <main id="top">
 <section class="hero"><div class="hero-in">
   <span class="halo" aria-hidden="true"><img src="../assets/img/hiven-symbol.webp" alt="" width="320" height="320"></span>
-  <div class="eyebrow">Hi Coffer · Digital Vault</div>
+  <div class="eyebrow">Hi Coffer&nbsp;· Digital Vault</div>
   <h1 class="motto-ko"><span>Lose nothing,</span> <span>gather into one,</span> <span><b>keep the only one in the vault</b></span></h1>
   <p class="motto-en" lang="en"><span class="s">Lose none.</span> <span class="s">Keep one.</span> <span class="s">Vault the only <b class="one">ONE!</b></span></p>
-  <p class="motto-hj" lang="ko-Hani">無一失 · 合爲一 · 唯一入庫</p>
-  <p class="lead"><span class="ln">We find scattered digital assets and organize what to keep and how to manage it.</span><span class="ln">The digital vault belongs solely to the user (customer).</span></p>
+  <p class="motto-hj" lang="ko-Hani">無一失&nbsp;· 合爲一&nbsp;· 唯一入庫</p>
+  <p class="lead"><span class="ln">We find scattered digital assets and organize what to keep and how to manage it.</span><span class="ln">The digital vault belongs solely to the user <span class="dim">(customer)</span>.</span></p>
   <div class="cta"><a class="btn p" href="https://hiven.co.kr/#download">Download Hi Coffer AI Agent</a><a class="btn g" href="#service">View service</a></div>
 </div></section>
 
@@ -145,13 +150,13 @@ footer .wrap>a{justify-self:end}
     <div class="st"><b class="n">1</b><h3>Identification</h3><p>The number/size/attributes of folders and files on storage media and devices connected to the device, and the device status, are checked.</p></div>
     <div class="st"><b class="n">2</b><h3>Classification</h3><p>Files are divided into standard categories by nature and type.</p></div>
     <div class="st"><b class="n">3</b><h3>Distinction</h3><p>Duplicates, old versions, authentic-copy candidates and locations of sensitive data are identified.</p></div>
-    <div class="st"><b class="n">4</b><h3>Management/Maintenance</h3><p>Items with harmful attributes (phishing/decoy/corrupted) and lost/damaged items are quarantined, then verified/acted on by the user.</p></div>
+    <div class="st"><b class="n">4</b><h3>Management/<wbr>Maintenance</h3><p>Items with harmful attributes (phishing/decoy/corrupted) and lost/damaged items are quarantined, then verified/acted on by the user.</p></div>
     <div class="st"><b class="n">5</b><h3>Vaulting</h3><p>Only digital assets (data/information) chosen/selected by the user are stored with encryption/original fingerprinting (SHA-256).<br>※ The vault key is owned/kept solely by the user.</p></div>
   </div>
   <div class="grid g3">
-    <div class="card"><h3>Management basis · Hi DAM</h3><p><span>A standard classification system for digital asset management.</span><span>Asset classification, attributes and history are managed on all devices</span><span>under the same (identical) system.</span></p></div>
+    <div class="card"><h3>Management basis&nbsp;· Hi DAM</h3><p><span>A standard classification system for digital asset management.</span><span>Asset classification, attributes and history are managed on all devices</span><span>under the same (identical) system.</span></p></div>
     <div class="card"><h3>Digital vault</h3><p><span>Only assets chosen by the user are stored.</span><span>Original verification (fingerprint) and access records are kept.</span></p></div>
-    <div class="card"><h3>Users</h3><p><span>It starts with individuals and families.</span><span>It will expand to businesses and public institutions.</span></p></div>
+    <div class="card"><h3>Target users</h3><p><span>It starts with individuals and families.</span><span>It will expand to businesses and public institutions.</span></p></div>
   </div>
 </div></section>
 
@@ -161,21 +166,21 @@ footer .wrap>a{justify-self:end}
   <p class="lead"><span class="ln">Hi Coffer AI Agent</span><span class="ln">is installed on PCs and laptops and manages devices, peripherals and media under a standard classification system.</span><span class="ln">It manages digital assets and the digital vault comprehensively and simultaneously.</span></p>
   <div class="arch">
     <div class="lab">Screen (user)</div>
-    <div class="row"><div class="box">Rule/system (Hi DAM) selection · Pre-execution forecast · Approval · Quarantine/action · Undo (restore)</div></div>
-    <div class="lab" style="margin-top:18px">Hi Coffer AI Agent = Hi DAM + Digital vault</div>
+    <div class="row"><div class="box">Rule/system (Hi DAM) selection&nbsp;· Forecast before execution&nbsp;· Approval&nbsp;· Quarantine/action&nbsp;· Undo (restore)</div></div>
+    <div class="lab" style="margin-top:18px">Hi Coffer AI Agent = Hi DAM + Digital&nbsp;vault</div>
     <div class="row g3" style="display:grid;grid-template-columns:repeat(3,1fr)">
-      <div class="box core">Collection · Inventory<small>Full inventory · Device identification</small></div>
-      <div class="box core">Classification · Auto-organization<small>Standard system · AI suggestions</small></div>
-      <div class="box core">Reconciliation · Search<small>Added · Changed · Moved · Missing</small></div>
-      <div class="box core">Vault<small>Encrypted storage · Original/authentic copy verification</small></div>
-      <div class="box core">Ledger · History<small>Every change recorded in a hash chain</small></div>
+      <div class="box core">Collection&nbsp;· Inventory<small>Full inventory&nbsp;· Device identification</small></div>
+      <div class="box core">Classification&nbsp;· Auto-organization<small>Standard system&nbsp;· AI suggestions</small></div>
+      <div class="box core">Reconciliation&nbsp;· Search<small>Added&nbsp;· Changed&nbsp;· Moved&nbsp;· Missing</small></div>
+      <div class="box core">Vault<small>Encrypted storage&nbsp;· Original/authentic copy verification</small></div>
+      <div class="box core">Ledger&nbsp;· History<small>Every change recorded in a hash chain</small></div>
       <div class="box core">Original structure/form preservation<small>Initial structure recorded for undo (restore)</small></div>
     </div>
     <div class="lab" style="margin-top:18px">Connected to</div>
     <div class="row" style="display:grid;grid-template-columns:repeat(3,1fr)">
-      <div class="box">PC · Laptop (device)<small>The system on which the AI Agent app runs</small><small>* Digital asset management · restore (Free)</small></div>
-      <div class="box">External disk · USB · Memory card (storage media/devices)<small>Management through identical identification, classification and processing for each medium</small><small>* Hi DAM · Subscription (regular)</small></div>
-      <div class="box">Cloud · Mobile phone (mobile)<small>* Multi-channel · cross-platform synchronization · Subscription (special)</small></div>
+      <div class="box">PC&nbsp;· Laptop (device)<small>The system on which the AI Agent app runs</small><small>* Digital asset management&nbsp;· restore (Free)</small></div>
+      <div class="box">External disk&nbsp;· USB&nbsp;· Memory card (storage media/devices)<small>Management through identical identification, classification and processing for each medium</small><small>* Hi DAM&nbsp;· Subscription (regular)</small></div>
+      <div class="box">Cloud&nbsp;· Mobile phone (mobile)<small>* Multi-channel&nbsp;· cross-platform synchronization&nbsp;· Subscription (special)</small></div>
     </div>
   </div>
   <p class="note"><span class="ln">Devices and media are distinguished by volume serial number, not drive letter.</span><span class="ln">Even after a medium is disconnected, it can be found using the inventory copy kept on the PC.</span></p>
@@ -184,10 +189,10 @@ footer .wrap>a{justify-self:end}
 <section class="sec alt" id="how"><div class="wrap">
   <div class="kicker">How it works</div>
   <h2>Management system</h2>
-  <p class="lead"><span class="ln">Steps 1–6 are diagnosis;</span><span class="ln">steps 7–12 are execution, management and vault.</span><span class="ln">Every process follows the user's confirmation, decision and approval, and presupposes preservation and recovery of originals.</span></p>
+  <p class="lead"><span class="ln">Steps 1–6 are diagnosis,</span><span class="ln">steps 7–12 are execution, management and vault.</span><span class="ln">Every process follows the user's confirmation, decision and approval, and presupposes preservation and recovery of originals.</span></p>
   <ol class="flow">
-    <li>Install · Consent</li><li>Device registration</li><li>Identification scan<br><small>Read-only</small></li><li>Distinction analysis<br><small>Content fingerprint</small></li><li>Classification</li><li>Diagnostic report</li>
-    <li>User decision</li><li>Organization run<br><small>Reconfirm → Quarantine</small></li><li>Confirm · Destroy</li><li>Management · Maintenance<br><small>Periodic check</small></li><li class="v">Vaulting<br><small>Optional</small></li><li class="v">Use<br><small>View · Submission copy</small></li>
+    <li>Install&nbsp;· Consent</li><li>Device registration</li><li>Identification scan<br><small>Read-only</small></li><li>Distinction analysis<br><small>Content fingerprint</small></li><li>Classification</li><li>Diagnostic report</li>
+    <li>User decision</li><li>Organization run<br><small>Reconfirm → Quarantine</small></li><li>Confirm&nbsp;· Destroy</li><li>Management&nbsp;· Maintenance<br><small>Periodic check</small></li><li class="v">Vaulting<br><small>Optional</small></li><li class="v">Use<br><small>View&nbsp;· Submission copy</small></li>
   </ol>
   <div class="grid g3">
     <div class="card"><h3>Processed on your PC</h3><p><span>File content is processed on the user's PC.</span><span>File content is not sent to a server.</span></p></div>
@@ -221,9 +226,9 @@ footer .wrap>a{justify-self:end}
   <div class="kicker">Roadmap</div>
   <h2>Release schedule</h2>
   <div class="grid g3">
-    <div class="card"><h3>Phase 1 · <span class="tag">Within 2026</span></h3><p><span>Beta (β) version for Windows PC</span><span>All features can be used free of charge.</span></p></div>
-    <div class="card"><h3>Phase 2 · <span class="tag">Early 2027</span></h3><p><span>Mobile beta (β) version for Android OS</span><span>Integration with PC is under consideration.</span></p></div>
-    <div class="card"><h3>Phase 3 · <span class="tag">To be announced</span></h3><p><span>Digital vault subscription · after the transition to paid service (planned)</span></p></div>
+    <div class="card"><h3>Phase 1&nbsp;· <span class="tag">Within 2026</span></h3><p><span>Beta (β) version for Windows PC</span><span>All features can be used free of charge.</span></p></div>
+    <div class="card"><h3>Phase 2&nbsp;· <span class="tag">Early 2027</span></h3><p><span>Mobile beta (β) version for Android OS</span><span>Integration with PC is under consideration.</span></p></div>
+    <div class="card"><h3>Phase 3&nbsp;· <span class="tag">To be announced</span></h3><p><span>Digital vault subscription&nbsp;· after the transition to paid service (planned)</span></p></div>
   </div>
   <p class="note"><span class="ln">The release schedule will be announced after stability (test-bed) verification.</span></p>
 </div></section>
@@ -235,6 +240,6 @@ footer .wrap>a{justify-self:end}
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 HIVEN · HIVE-Group</span><span class="fm">Hi Coffer · Hi DAM</span><a href="https://hiven.co.kr/">hiven.co.kr</a></div></footer>
+<footer><div class="wrap"><span>© 2026 HIVEN&nbsp;· HIVE-Group</span><span class="fm">Hi Coffer&nbsp;· Hi DAM</span><a href="https://hiven.co.kr/">hiven.co.kr</a></div></footer>
 </body>
 </html>
