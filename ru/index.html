@@ -74,7 +74,7 @@ h3{font-size:19px;font-weight:700}
 .steps{margin-top:36px;border-top:1px solid var(--line)}.st{display:grid;grid-template-columns:44px 96px 1fr;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}.st .n{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--grad);color:#fff;align-items:center;justify-content:center;font-size:16px}.st p{color:var(--sub);font-size:16px}
 .flow{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:32px;counter-reset:s}
 .flow li{border:1px solid var(--line);border-radius:12px;padding:14px;font-size:16px;background:var(--bg)}
-.flow li:before{counter-increment:s;content:counter(s);display:block;font-weight:800;color:var(--c2);font-size:18px}
+.flow li:before{counter-increment:s;content:"#" counter(s);display:block;font-weight:800;color:var(--c2);font-size:18px}
 .flow li.v{border-color:var(--c3)}
 .note{margin-top:14px;font-size:14px;color:var(--faint)}
 .arch{margin-top:36px;border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--bg)}
@@ -183,7 +183,7 @@ footer .wrap>a{justify-self:end}
 <section class="sec alt" id="how"><div class="wrap">
   <div class="kicker">How it works</div>
   <h2>Система управления</h2>
-  <p class="lead"><span class="ln">Этапы 1–6 — диагностика, этапы 7–12 — выполнение, управление и хранилище.</span><span class="ln">Все процессы выполняются по подтверждению, решению и утверждению пользователя и предполагают сохранение и восстановление оригиналов.</span></p>
+  <p class="lead"><span class="ln">Этапы 1–6 — диагностика,</span><span class="ln">этапы 7–12 — выполнение, управление и хранилище.</span><span class="ln">Все процессы выполняются по подтверждению, решению и утверждению пользователя и предполагают сохранение и восстановление оригиналов.</span></p>
   <ol class="flow">
     <li>Установка·согласие</li><li>Регистрация устройства</li><li>Сканирование<br><small>Только чтение</small></li><li>Анализ различий<br><small>Отпечаток содержимого</small></li><li>Классификация</li><li>Диагностический отчёт</li>
     <li>Решение пользователя</li><li>Упорядочивание<br><small>Повторная проверка → изоляция</small></li><li>Проверка·уничтожение</li><li>Управление·поддержка<br><small>Регулярная проверка</small></li><li class="v">Помещение в хранилище<br><small>По выбору</small></li><li class="v">Использование<br><small>Просмотр·копия для подачи</small></li>

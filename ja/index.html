@@ -74,7 +74,7 @@ h3{font-size:19px;font-weight:700}
 .steps{margin-top:36px;border-top:1px solid var(--line)}.st{display:grid;grid-template-columns:44px 96px 1fr;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}.st .n{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--grad);color:#fff;align-items:center;justify-content:center;font-size:16px}.st p{color:var(--sub);font-size:16px}
 .flow{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:32px;counter-reset:s}
 .flow li{border:1px solid var(--line);border-radius:12px;padding:14px;font-size:16px;background:var(--bg)}
-.flow li:before{counter-increment:s;content:counter(s);display:block;font-weight:800;color:var(--c2);font-size:18px}
+.flow li:before{counter-increment:s;content:"#" counter(s);display:block;font-weight:800;color:var(--c2);font-size:18px}
 .flow li.v{border-color:var(--c3)}
 .note{margin-top:14px;font-size:14px;color:var(--faint)}
 .arch{margin-top:36px;border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--bg)}
@@ -184,7 +184,7 @@ footer .wrap>a{justify-self:end}
 <section class="sec alt" id="how"><div class="wrap">
   <div class="kicker">How it works</div>
   <h2>管理体系</h2>
-  <p class="lead"><span class="ln">1～6段階は診断、7～12段階は実行・管理・金庫です。</span><span class="ln">すべての過程はユーザーの確認と決定・承認に従い、原本の保全・復旧を前提とします。</span></p>
+  <p class="lead"><span class="ln">1～6段階は診断、</span><span class="ln">7～12段階は実行・管理・金庫です。</span><span class="ln">すべての過程はユーザーの確認と決定・承認に従い、原本の保全・復旧を前提とします。</span></p>
   <ol class="flow">
     <li>インストール・同意</li><li>装置登録</li><li>識別スキャン<br><small>読み取り専用</small></li><li>選別分析<br><small>内容フィンガープリント</small></li><li>区分（分類）</li><li>診断レポート</li>
     <li>ユーザー決定</li><li>整理実行<br><small>再確認 → 隔離</small></li><li>確認・廃棄</li><li>管理・維持<br><small>定期点検</small></li><li class="v">金庫化<br><small>選択</small></li><li class="v">活用<br><small>閲覧・提出用</small></li>
