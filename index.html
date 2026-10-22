@@ -89,7 +89,10 @@ td b{color:var(--ink)}
 .dl{background:var(--navy);color:#fff;text-align:center}
 .dl h2{color:#fff}.dl .lead{color:#C9D2F5;margin-left:auto;margin-right:auto}
 footer{padding:36px 0;font-size:14px;color:var(--faint);border-top:1px solid var(--line)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+footer .fm{font-size:21px;font-weight:700;text-align:center}
+footer .wrap>a{justify-self:end}
+@media(max-width:600px){footer .wrap{grid-template-columns:1fr;justify-items:center;text-align:center}footer .wrap>a{justify-self:center}}
 @media (max-width:900px){.g4,.g5{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:repeat(3,1fr)}nav{display:none}}
 @media (max-width:600px){.card p span{white-space:normal}.st{grid-template-columns:44px 1fr}.st p{grid-column:2}.wrap{padding:0 16px}.g3,.g4,.g5{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.motto-ko{font-size:32px}.motto-en,.motto-hj{font-size:18px}h2{font-size:26px}.sec{padding:64px 0}table{font-size:14px}th,td{padding:10px 6px}}
 @media (max-width:1100px){.ln,.card p span{white-space:normal}}
@@ -224,6 +227,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 HIVEN · HIVE-Group</span><span>Hi Coffer · Hi DAM</span><a href="https://hiven.co.kr/">hiven.co.kr</a></div></footer>
+<footer><div class="wrap"><span>© 2026 HIVEN · HIVE-Group</span><span class="fm">Hi Coffer · Hi DAM</span><a href="https://hiven.co.kr/">hiven.co.kr</a></div></footer>
 </body>
 </html>
