@@ -114,12 +114,17 @@ footer .wrap>a{justify-self:end}
 td.sc{text-align:center;vertical-align:top;line-height:1.3;white-space:nowrap}td.sc b,td.sc .sq{display:block}td.sc .sq{color:#B8BCC6;font-weight:700}
 footer .fr{justify-self:end;text-align:right;display:flex;flex-direction:column;gap:6px}footer .fmail{color:#D3D6DE}
 @media(max-width:600px){footer .fr{justify-self:center;text-align:center;align-items:center}}
+.link2{display:grid;grid-template-columns:1fr 64px 1fr;gap:10px;align-items:stretch;margin-top:12px}
+.link2 .mid{display:flex;flex-direction:column;justify-content:center;align-items:center;font-size:13px;color:var(--faint);text-align:center;line-height:1.4}
+.link2 .mid b{font-size:26px;color:var(--c2);line-height:1}
+.box.silver{background:linear-gradient(120deg,#7711FC,#2343D7);color:#fff;border:0;font-weight:700;text-align:center}.box.silver small{color:#E8ECFF}
+@media(max-width:600px){.link2{grid-template-columns:1fr}.link2 .mid{flex-direction:row;gap:8px}.link2 .mid b{transform:rotate(90deg)}}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap top-in">
   <a class="brand" href="#top"><img src="assets/img/hiven-symbol.webp" alt=""><span class="bt">Hi Coffer <span class="nw">AI Agent</span></span></a>
-  <nav><a href="#motto">모토</a><a href="#service">서비스</a><a href="#agent">에이전트</a><a href="#how">관리체계</a><a href="#plan">구독</a><a href="#road">일정</a><a href="#download">내려받기</a></nav><span class="langs"><b>한글</b> · <a href="/en/" hreflang="en" lang="en">EN</a> · <a href="/ru/" hreflang="ru" lang="ru">РУ</a> · <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a> · <a href="/ja/" hreflang="ja" lang="ja">日本</a></span>
+  <nav><a href="#motto">모토</a><a href="#service">서비스</a><a href="#agent">에이전트</a><a href="#how">관리체계</a><a href="#silver">Hi Silver 연동</a><a href="#plan">구독</a><a href="#road">일정</a><a href="#download">내려받기</a></nav><span class="langs"><b>한글</b> · <a href="/en/" hreflang="en" lang="en">EN</a> · <a href="/ru/" hreflang="ru" lang="ru">РУ</a> · <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a> · <a href="/ja/" hreflang="ja" lang="ja">日本</a></span>
 </div></header>
 
 <main id="top">
@@ -206,7 +211,34 @@ footer .fr{justify-self:end;text-align:right;display:flex;flex-direction:column;
   </div>
 </div></section>
 
-<section class="sec" id="plan"><div class="wrap">
+<section class="sec" id="silver"><div class="wrap">
+  <div class="kicker">Hi Coffer × Hi Silver</div>
+  <h2>Hi Silver AI와의 연동 관계</h2>
+  <p class="lead"><span class="ln">Hi Coffer는 지키고(온라인·디지털), Hi Silver는 잇습니다(온·오프라인).</span><span class="ln">원본은 Hi Coffer 금고에만 두고, Hi Silver AI는 목록과 권한만 받습니다.</span></p>
+  <div class="arch">
+    <div class="lab">사용자 (본인 · 지정인)</div>
+    <div class="row"><div class="box">모든 제공·위탁을 직접 승인 · 언제든지 철회 · 지정인을 미리 정함</div></div>
+    <div class="lab" style="margin-top:18px">연동 구조</div>
+    <div class="link2">
+      <div class="box core">Hi Coffer AI<small>디지털금고 · 원본 보관</small><small>Hi DAM 분류 · 원본 지문(SHA-256) · 이력 원장</small></div>
+      <div class="mid"><b>⇄</b>목록 · 권한<br>승인한 것만</div>
+      <div class="box silver">Hi Silver AI<small>누구에게 · 무엇을 · 언제까지</small><small>사람 · 기관 · 서류 · 현장 연결</small></div>
+    </div>
+    <div class="lab" style="margin-top:18px">연동 방식</div>
+    <ol class="flow">
+      <li>담기<br><small>원본 → 금고</small></li><li>목록 조회<br><small>원본은 열지 않음</small></li><li>제공 승인<br><small>상대·범위·기간</small></li><li>제공<br><small>금고에서 직접</small></li><li>철회<br><small>즉시 중지</small></li><li class="v">결과 기록<br><small>증빙으로 보관</small></li>
+    </ol>
+    <div class="lab" style="margin-top:18px">Hi Silver AI가 연결하는 곳</div>
+    <div class="row" style="display:grid;grid-template-columns:repeat(3,1fr)">
+      <div class="box">진료·보험<small>진료 기록 요약 · 보험 청구 서류 대조</small></div>
+      <div class="box">위기·돌봄<small>109·119 연계 · 보호자 · 지자체</small></div>
+      <div class="box">장례·사후<small>지정인 열람 · 유언·신탁 증빙 · 디지털 유산</small></div>
+    </div>
+  </div>
+  <p class="note"><span class="ln">두 에이전트는 따로 써도 되고, 함께 쓰면 생애주기 마지막까지 한 흐름으로 이어집니다.</span><span class="ln">Hi Silver AI · <a href="https://hisilver.ai/" style="text-decoration:underline">hisilver.ai</a></span></p>
+</div></section>
+
+<section class="sec alt" id="plan"><div class="wrap">
   <div class="kicker">Subscription</div>
   <h2>구독 플랫폼</h2>
   <p class="lead"><span class="ln">Hi Coffer는 사용자의 디지털자산을 효율적·효과적으로 관리합니다.</span><span class="ln">누구나 회원가입 없이 사용하며, 디지털자산을 지켜드릴 것입니다.</span></p>
@@ -224,7 +256,7 @@ footer .fr{justify-self:end;text-align:right;display:flex;flex-direction:column;
   </ul>
 </div></section>
 
-<section class="sec alt" id="road"><div class="wrap">
+<section class="sec" id="road"><div class="wrap">
   <div class="kicker">Roadmap</div>
   <h2>배포 일정</h2>
   <div class="grid g3">
