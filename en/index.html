@@ -135,6 +135,7 @@ nav{flex:1;min-width:0;justify-content:center;gap:clamp(10px,1.3vw,22px);font-si
 nav a{flex:none}
 @media(max-width:1100px){nav{display:none}}
 /*flow1000*/@media(min-width:601px) and (max-width:1000px){.flow{grid-template-columns:repeat(3,1fr)}}
+.halolink{display:inline-block;cursor:pointer;position:relative;z-index:2}.halo{pointer-events:auto}
 </style>
 </head>
 <body>
@@ -145,7 +146,7 @@ nav a{flex:none}
 
 <main id="top">
 <section class="hero"><div class="hero-in">
-  <span class="halo" aria-hidden="true"><img src="../assets/img/hiven-symbol.webp" alt="" width="320" height="320"></span>
+  <span class="halo"><a class="halolink" href="https://hiven.co.kr/en/" aria-label="HIVEN · hiven.co.kr"><img src="../assets/img/hiven-symbol.webp" alt="" width="320" height="320"></a></span>
   <div class="eyebrow">Hi Coffer&nbsp;· Digital Vault</div>
   <h1 class="motto-ko"><span>Lose nothing,</span> <span>gather into one,</span> <span><b>keep the only one in the vault</b></span></h1>
   <p class="motto-en" lang="en"><span class="s">Lose none.</span> <span class="s">Keep one.</span> <span class="s">Vault the only <b class="one">ONE!</b></span></p>
