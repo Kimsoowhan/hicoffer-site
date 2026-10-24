@@ -138,7 +138,7 @@ nav a{flex:none}
 /*flow1000*/@media(min-width:601px) and (max-width:1000px){.flow{grid-template-columns:repeat(3,1fr)}}
 .halolink{display:inline-block;cursor:pointer;position:relative;z-index:2}.halo{pointer-events:auto}
 .sec:not(.dark):not(.dl) h2{color:#10184A}.sec:not(.dark):not(.dl) h3{color:#10184A}.sec:not(.dark):not(.dl) .wrap>h3{color:#3949AB}
-</style>
+#plan table{table-layout:fixed}#plan thead th:first-child{width:15%}#plan thead th:last-child{width:9.5%}@media (max-width:960px){table.stk thead{display:none}table.stk,table.stk tbody,table.stk tr,table.stk td{display:block;width:100%}table.stk tr{border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-top:12px;background:var(--bg)}table.stk td{border:0;padding:6px 0;text-align:left!important;white-space:normal}table.stk td:first-child{font-size:16px;padding-top:2px}table.stk td:not(:first-child):before{content:attr(data-label);display:block;font-size:12.5px;font-weight:700;color:var(--faint);letter-spacing:.04em}table.stk td.sc b,table.stk td.sc .sq{display:inline;margin-right:4px}}@media (max-width:960px){table.stk td.nl:before{content:none}.mlab{display:block;font-size:12.5px;font-weight:700;color:var(--faint);letter-spacing:.04em}}</style>
 </head>
 <body>
 <header class="top"><div class="wrap top-in">
@@ -255,13 +255,13 @@ nav a{flex:none}
   <div class="kicker">Plan</div>
   <h2>Тарифы</h2>
   <p class="lead"><span class="ln">Hi Coffer эффективно и&nbsp;результативно управляет цифровыми активами пользователя.</span><span class="ln">Им может пользоваться каждый без регистрации, и&nbsp;он защитит ваши цифровые активы.</span></p>
-  <table>
+  <table class="stk">
     <thead><tr><th style="text-align:center">Тип</th><th>Что предоставляется</th><th>Условия</th></tr></thead>
     <tbody>
-      <tr><td class="sc"><b>Пробная версия</b></td><td>Бета-версия (β)</td><td>Бесплатно</td></tr>
-      <tr><td class="sc"><b>Коммерческая версия</b></td><td>Управление цифровыми активами и&nbsp;отчётность<br>Функции хранилища и&nbsp;управления Hi DAM не включены</td><td>Бесплатно</td></tr>
-      <tr><td class="sc"><b>Подписка</b><span class="sq">(регулярная)</span></td><td>Управление активами по стандартной системе классификации (Hi DAM)<br>Сервисная платформа цифрового хранилища</td><td>Платно</td></tr>
-      <tr><td class="sc"><b>Подписка</b><span class="sq">(специальная)</span></td><td>Подтверждение оригинала на основе блокчейна</td><td>Платно</td></tr>
+      <tr><td class="sc" data-label="Тип"><b>Пробная версия</b></td><td data-label="Что предоставляется">Бета-версия (β)</td><td data-label="Условия">Бесплатно</td></tr>
+      <tr><td class="sc" data-label="Тип"><b>Коммерческая версия</b></td><td data-label="Что предоставляется">Управление цифровыми активами и&nbsp;отчётность<br>Функции хранилища и&nbsp;управления Hi DAM не включены</td><td data-label="Условия">Бесплатно</td></tr>
+      <tr><td class="sc" data-label="Тип"><b>Подписка</b><span class="sq">(регулярная)</span></td><td data-label="Что предоставляется">Управление активами по стандартной системе классификации (Hi DAM)<br>Сервисная платформа цифрового хранилища</td><td data-label="Условия">Платно</td></tr>
+      <tr><td class="sc" data-label="Тип"><b>Подписка</b><span class="sq">(специальная)</span></td><td data-label="Что предоставляется">Подтверждение оригинала на основе блокчейна</td><td data-label="Условия">Платно</td></tr>
     </tbody>
   </table>
   <ul class="ticks">

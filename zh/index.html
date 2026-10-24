@@ -138,7 +138,7 @@ nav a{flex:none}
 /*flow1000*/@media(min-width:601px) and (max-width:1000px){.flow{grid-template-columns:repeat(3,1fr)}}
 .halolink{display:inline-block;cursor:pointer;position:relative;z-index:2}.halo{pointer-events:auto}
 .sec:not(.dark):not(.dl) h2{color:#10184A}.sec:not(.dark):not(.dl) h3{color:#10184A}.sec:not(.dark):not(.dl) .wrap>h3{color:#3949AB}
-</style>
+#plan table{table-layout:fixed}#plan thead th:first-child{width:15%}#plan thead th:last-child{width:9.5%}@media (max-width:960px){table.stk thead{display:none}table.stk,table.stk tbody,table.stk tr,table.stk td{display:block;width:100%}table.stk tr{border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-top:12px;background:var(--bg)}table.stk td{border:0;padding:6px 0;text-align:left!important;white-space:normal}table.stk td:first-child{font-size:16px;padding-top:2px}table.stk td:not(:first-child):before{content:attr(data-label);display:block;font-size:12.5px;font-weight:700;color:var(--faint);letter-spacing:.04em}table.stk td.sc b,table.stk td.sc .sq{display:inline;margin-right:4px}}@media (max-width:960px){table.stk td.nl:before{content:none}.mlab{display:block;font-size:12.5px;font-weight:700;color:var(--faint);letter-spacing:.04em}}</style>
 </head>
 <body>
 <header class="top"><div class="wrap top-in">
@@ -255,13 +255,13 @@ nav a{flex:none}
   <div class="kicker">Plan</div>
   <h2>使用方式</h2>
   <p class="lead"><span class="ln">Hi Coffer 高效·有效地管理用户的<span class="nw">数字资产</span>。</span><span class="ln">任何人无需注册会员即可使用，我们将守护您的<span class="nw">数字资产</span>。</span></p>
-  <table>
+  <table class="stk">
     <thead><tr><th style="text-align:center">类别</th><th>提供内容</th><th>形式</th></tr></thead>
     <tbody>
-      <tr><td class="sc"><b>试用版</b></td><td>测试(β)版</td><td>免费</td></tr>
-      <tr><td class="sc"><b>商用版</b></td><td><span class="nw">数字资产</span>管理及报告<br>不包含保险库·Hi DAM 管理功能</td><td>免费</td></tr>
-      <tr><td class="sc"><b>订阅</b><span class="sq">（定期）</span></td><td>应用标准分类体系（Hi DAM）的<span class="nw">资产管理</span><br>数字保险库服务平台</td><td>付费</td></tr>
-      <tr><td class="sc"><b>订阅</b><span class="sq">（特定）</span></td><td>基于区块链的原件证明</td><td>付费</td></tr>
+      <tr><td class="sc" data-label="类别"><b>试用版</b></td><td data-label="提供内容">测试(β)版</td><td data-label="形式">免费</td></tr>
+      <tr><td class="sc" data-label="类别"><b>商用版</b></td><td data-label="提供内容"><span class="nw">数字资产</span>管理及报告<br>不包含保险库·Hi DAM 管理功能</td><td data-label="形式">免费</td></tr>
+      <tr><td class="sc" data-label="类别"><b>订阅</b><span class="sq">（定期）</span></td><td data-label="提供内容">应用标准分类体系（Hi DAM）的<span class="nw">资产管理</span><br>数字保险库服务平台</td><td data-label="形式">付费</td></tr>
+      <tr><td class="sc" data-label="类别"><b>订阅</b><span class="sq">（特定）</span></td><td data-label="提供内容">基于区块链的原件证明</td><td data-label="形式">付费</td></tr>
     </tbody>
   </table>
   <ul class="ticks">
