@@ -22,7 +22,7 @@
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#E6E9F5;--sub:#B4BAD3;--faint:#8A90AA;--line:#2A3160;--bg:#0B1036;--bg2:#121947}}
 :root[data-theme="dark"]{--ink:#E6E9F5;--sub:#B4BAD3;--faint:#8A90AA;--line:#2A3160;--bg:#0B1036;--bg2:#121947}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
+html{scroll-padding-top:72px}[id]{scroll-margin-top:72px}
 body{font-family:"Pretendard",system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg);font-size:17px;line-height:1.7;word-break:keep-all;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;height:auto;display:block}
@@ -154,7 +154,7 @@ footer.hfoot .hf-brand .kn{font-size:15px;line-height:1}
 footer.hfoot .hf-l,footer.hfoot .hf-r{display:contents}
 footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-pol{order:3}footer.hfoot .hf-m{order:4}footer.hfoot .hf-site{order:5}footer.hfoot .hf-mail{order:6}}
 </style>
-<style id="mvn-css">.mvn{position:fixed;right:14px;bottom:50%;transform:translateY(50%);display:flex;flex-direction:column;gap:8px;z-index:50}.mvn button{width:40px;height:40px;border:0;border-radius:50%;background:#2343D7;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;box-shadow:0 4px 12px rgba(35,67,215,.3);-webkit-user-select:none;user-select:none;touch-action:none;-webkit-touch-callout:none}</style><style id="off-css">.card.off h3,.card.off h3 *{color:#9AA0B4 !important}</style></head>
+<style id="mvn-css">.mvn{position:fixed;right:14px;bottom:50%;transform:translateY(50%);display:flex;flex-direction:column;gap:8px;z-index:50}.mvn button{width:40px;height:40px;border:0;border-radius:50%;background:#2343D7;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;box-shadow:0 4px 12px rgba(35,67,215,.3);-webkit-user-select:none;user-select:none;touch-action:none;-webkit-touch-callout:none}</style><style id="off-css">.card.off h3,.card.off h3 *{color:#9AA0B4 !important}</style><style id="dark-h">@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sec:not(.dark):not(.dl) h2,:root:not([data-theme="light"]) .sec:not(.dark):not(.dl) h3{color:#E6E9F5}:root:not([data-theme="light"]) .sec:not(.dark):not(.dl) .wrap>h3{color:#9FB4FF}}:root[data-theme="dark"] .sec:not(.dark):not(.dl) h2,:root[data-theme="dark"] .sec:not(.dark):not(.dl) h3{color:#E6E9F5}:root[data-theme="dark"] .sec:not(.dark):not(.dl) .wrap>h3{color:#9FB4FF}.svc-head{display:flex;gap:20px 28px;align-items:center;justify-content:space-between;flex-wrap:wrap}.svc-head .lead{flex:1 1 520px;min-width:0}.svc-head .btn{flex:0 0 auto;white-space:nowrap}</style></head>
 <body>
 <header class="top"><div class="wrap top-in">
   <a class="brand" href="#top"><img src="../assets/img/hiven-symbol.webp" alt=""><span class="bt">Hi Coffer <span class="nw">AI Agent</span></span></a>
@@ -185,16 +185,16 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
 <section class="sec alt" id="service"><div class="wrap">
   <div class="kicker">Service</div>
   <h2>What Hi Coffer AI Agent does</h2>
-  <p class="lead"><span class="ln">It finds digital assets (identification), decides what (classification) goes into the vault (distinction) and how it is stored (management/maintenance) (vaulting).</span><span class="ln">The digital vault protects the user's digital assets directly and indirectly, and enables their safe use.</span></p>
+  <div class="svc-head"><p class="lead"><span class="ln">It finds digital assets (identification), decides what (classification) goes into the vault (distinction) and how it is stored (management/maintenance) (vaulting).</span><span class="ln">The digital vault protects the user's digital assets directly and indirectly, and enables their safe use.</span></p><a class="btn p" href="member.html">Hi Coffer Paid Service (Subscription)</a></div>
   <div class="steps">
     <div class="st"><b class="n">1</b><h3>Identification</h3><p>The number/size/attributes of folders and files on storage media and devices connected to the device, and the device status, are checked.</p></div>
-    <div class="st"><b class="n">2</b><h3>Classification</h3><p>Files are divided into standard categories by nature and type.</p></div>
+    <div class="st"><b class="n">2</b><h3>Classification</h3><p>Files are divided by the classification system (Hi DAM) by nature and type.</p></div>
     <div class="st"><b class="n">3</b><h3>Distinction</h3><p>Duplicates, old versions, authentic-copy candidates and locations of sensitive data are identified.</p></div>
     <div class="st"><b class="n">4</b><h3>Management/<wbr>Maintenance</h3><p>Items with harmful attributes (phishing/decoy/corrupted) and lost/damaged items are quarantined, then verified/acted on by the user.</p></div>
     <div class="st"><b class="n">5</b><h3>Vaulting</h3><p>Only digital assets (data/information) chosen/selected by the user are stored with encryption/original fingerprinting (SHA-256).<br>※ The vault key is owned/kept solely by the user.</p></div>
   </div>
   <div class="grid g3">
-    <div class="card"><h3>Management basis&nbsp;· Hi DAM</h3><p><span>A standard classification system for digital asset management.</span><span>Asset classification, attributes and history are managed on all devices</span><span>under the same (identical) system.</span></p></div>
+    <div class="card"><h3>Management basis&nbsp;· Hi DAM</h3><p><span>A classification system for digital asset management.</span><span>Asset classification, attributes and history are managed on all devices</span><span>under the same (identical) system.</span></p></div>
     <div class="card"><h3>Digital vault</h3><p><span>Only assets chosen by the user are stored.</span><span>Original verification (fingerprint) and access records are kept.</span></p></div>
     <div class="card"><h3>Target users</h3><p><span>It starts with individuals and families.</span><span>It will expand to businesses and public institutions.</span></p></div>
   </div>
@@ -202,14 +202,14 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
 <section class="sec" id="agent"><div class="wrap">
   <div class="kicker">Hi Coffer AI Agent</div>
   <h2>Role of the agent</h2>
-  <p class="lead"><span class="ln">Hi Coffer AI Agent</span><span class="ln">is installed on PCs and laptops and manages devices, peripherals and media under a standard classification system.</span><span class="ln">It manages digital assets and the digital vault comprehensively and simultaneously.</span></p>
+  <p class="lead"><span class="ln">Hi Coffer AI Agent</span><span class="ln">is installed on PCs and laptops and manages devices, peripherals and media under the classification system (Hi DAM).</span><span class="ln">It manages digital assets and the digital vault comprehensively and simultaneously.</span></p>
   <div class="arch">
     <div class="lab">Screen (user)</div>
     <div class="row"><div class="box">Rule/system (Hi DAM) selection&nbsp;· Forecast before execution&nbsp;· Approval&nbsp;· Quarantine/action&nbsp;· Recovery (Undo)</div></div>
     <div class="lab" style="margin-top:18px">Hi Coffer AI Agent = Hi DAM + Digital&nbsp;vault</div>
     <div class="row g3" style="display:grid;grid-template-columns:repeat(3,1fr)">
       <div class="box core">Collection&nbsp;· Inventory<small>Full inventory&nbsp;· Device identification</small></div>
-      <div class="box core">Classification&nbsp;· Auto-organization<small>Standard system&nbsp;· AI suggestions</small></div>
+      <div class="box core">Classification&nbsp;· Auto-organization<small>Classification system&nbsp;· AI suggestions</small></div>
       <div class="box core">Reconciliation&nbsp;· Search<small>Added&nbsp;· Changed&nbsp;· Moved&nbsp;· Missing</small></div>
       <div class="box core">Vault<small>Encrypted storage&nbsp;· Original/authentic copy verification</small></div>
       <div class="box core">Ledger&nbsp;· History<small>Every change recorded in a hash chain</small></div>
@@ -218,8 +218,8 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
     <div class="lab" style="margin-top:18px">Connected to</div>
     <div class="row" style="display:grid;grid-template-columns:repeat(3,1fr)">
       <div class="box">PC&nbsp;· Laptop (device)<small>The system on which the AI Agent app runs</small><small>* Digital asset management&nbsp;· Recovery (Undo) (Free)</small></div>
-      <div class="box">External disk&nbsp;· USB&nbsp;· Memory card (storage media/devices)<small>Management through identical identification, classification and processing for each medium</small><small>* Hi DAM (Free · no sign-up)</small></div>
-      <div class="box">Cloud&nbsp;· Mobile phone (mobile)<small>* Multi-channel&nbsp;· cross-platform synchronization&nbsp;· Cloud (not provided during beta)</small></div>
+      <div class="box">External disk&nbsp;· USB&nbsp;· Memory card (storage media/devices)<small>Management through identical identification, classification and processing for each medium</small><small>* Hi DAM basic organizing function (Free)</small></div>
+      <div class="box">Cloud&nbsp;· Mobile phone (mobile)<small>* Multi-channel&nbsp;· cross-platform synchronization&nbsp;· Cloud (paid subscription service · linked after sign-up)</small></div>
     </div>
   </div>
   <p class="note"><span class="ln">Devices and media are distinguished by volume serial number, not drive letter.</span><span class="ln">Even after a medium is disconnected, it can be found using the inventory copy kept on the PC.</span></p>
@@ -235,7 +235,7 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
   <div class="grid g3">
     <div class="card"><h3>Processed on your PC</h3><p><span>File content is processed on the user's PC.</span><span>File content is not sent to a server.</span></p></div>
     <div class="card"><h3>No immediate deletion</h3><p><span>The order is quarantine/move → user confirmation → deletion.</span><span>Only the user can delete permanently.</span></p></div>
-    <div class="card"><h3>Recovery (Undo)</h3><p><span>Every change is recorded before and after execution.</span><span>You can return to the initial structure.</span><span>Free Recovery (Undo) is limited in number (5&nbsp;times during beta, 2&nbsp;times after commercial launch).</span><span>※ Recovery we take responsibility for (Full Restore) is available only with the subscription service.</span></p></div>
+    <div class="card"><h3>Recovery (Undo)</h3><p><span>Every change is recorded before and after execution.</span><span>You can return to the initial structure.</span><span>Free Recovery (Undo) is limited in number (5&nbsp;times during beta, 2&nbsp;times after commercial launch).</span><span>※ Recovery we take responsibility for (Full Restore) applies only to the subscription service.</span></p></div>
     <div class="card"><h3>Protected areas untouched</h3><p><span>Installation files, digital certificates and system areas</span><span>are excluded from organization.</span></p></div>
     <div class="card"><h3>User-defined choices first</h3><p><span>Device roles defined by the user</span><span>take precedence over organization rules.</span></p></div>
     <div class="card"><h3>AI only suggests</h3><p><span>AI judgments are shown as suggestions with their grounds.</span><span>The user decides whether to execute.</span></p></div>
@@ -264,13 +264,13 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
 <section class="sec alt" id="plan"><div class="wrap">
   <div class="kicker">Plan</div>
   <h2>Plans</h2>
-  <p class="lead"><span class="ln">Hi Coffer manages the user's digital assets efficiently and effectively.</span><span class="ln">Hi DAM can be used by anyone free of charge, at any time, without sign-up.</span><span class="ln">The digital vault (KEYCOVER) is free during the beta and is then provided as a subscription after sign-up.</span></p>
+  <p class="lead"><span class="ln">Hi Coffer manages the user's digital assets efficiently and effectively.</span><span class="ln">Only the basic organizing function of Hi DAM (classification system) is free; applying the classification system and additional functions are a paid service (subscription).</span><span class="ln">The paid service (subscription) of Hi Coffer covers applying the Hi DAM classification system and additional services, and the digital vault (KEYCOVER), which are free during the beta.</span></p>
   <table class="stk">
     <thead><tr><th style="text-align:center">Type</th><th>Provided</th><th>Form</th></tr></thead>
     <tbody>
-      <tr><td class="sc" data-label="Type"><b>Trial version</b></td><td data-label="Provided">Beta (β) version — Hi DAM · digital vault (KEYCOVER), no sign-up</td><td data-label="Form">Free</td></tr>
-      <tr><td class="sc" data-label="Type"><b>Commercial version</b></td><td data-label="Provided">Digital asset management and reporting under the Hi DAM standard classification<br>No sign-up, at any time</td><td data-label="Form">Free</td></tr>
-      <tr><td class="sc" data-label="Type"><b>Subscription</b><span class="sq">(regular)</span></td><td data-label="Provided">Digital vault (KEYCOVER) service — after the beta<br>Sign-up required</td><td data-label="Form">Paid</td></tr>
+      <tr><td class="sc" data-label="Type"><b>Trial version</b></td><td data-label="Provided">Beta (β) version — all features free<br>Applying the classification system, additional services and the digital vault (KEYCOVER) require sign-up (cloud service)</td><td data-label="Form">Free</td></tr>
+      <tr><td class="sc" data-label="Type"><b>Commercial version</b></td><td data-label="Provided">Basic organizing function of Hi DAM (classification system)<br>No sign-up</td><td data-label="Form">Free</td></tr>
+      <tr><td class="sc" data-label="Type"><b>Subscription</b><span class="sq">(regular)</span></td><td data-label="Provided">Applying the Hi DAM classification system and additional services · digital vault (KEYCOVER) — from the commercial version<br>Sign-up (cloud service) required</td><td data-label="Form">Paid</td></tr>
       <tr><td class="sc" data-label="Type"><b>Subscription</b><span class="sq">(special)</span></td><td data-label="Provided">Premium vault tier — blockchain-based proof of original<br>Sign-up required</td><td data-label="Form">Paid</td></tr>
     </tbody>
   </table>
@@ -282,7 +282,7 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
   <div class="kicker">Roadmap</div>
   <h2>Release schedule</h2>
   <div class="grid g3">
-    <div class="card"><h3>Phase 1&nbsp;· <span class="tag">Within 2026</span></h3><p><span>Beta (β) version for Windows PC</span><span>Hi DAM and the digital vault (KEYCOVER) can be used free of charge without sign-up.</span></p></div>
+    <div class="card"><h3>Phase 1&nbsp;· <span class="tag">Within 2026</span></h3><p><span>Beta (β) version for Windows PC</span><span>All features are free to use; the digital vault feature requires sign-up.</span></p></div>
     <div class="card"><h3>Phase 2&nbsp;· <span class="tag">Early 2027</span></h3><p><span>Mobile beta (β) version for Android OS</span><span>Integration with PC is under consideration.</span></p></div>
     <div class="card off"><h3>Phase 3&nbsp;· <span class="tag tbd">To be announced</span></h3><p><span>Digital vault subscription&nbsp;· after the transition to paid service (planned)</span></p></div>
   </div>
@@ -296,5 +296,5 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
 </main>
 
 <footer class="hfoot"><div class="wrap hf"><div class="hf-l"><a class="hf-brand" href="https://hiven.co.kr/en/#top" aria-label="HIVEN"><img src="/assets/img/hiven-footer-logo.png" alt="HIVEN · 하이븐" width="116" height="19" style="display:block;height:19px;width:auto"></a><a class="hf-pol" href="https://hiven.co.kr/en/policies.html">Terms & Policies</a></div><div class="hf-m"><a href="https://hicoffer.ai/en/">Hi Coffer</a> · <a href="https://hisilver.ai/en/">Hi Silver</a></div><div class="hf-r"><span class="hf-copy">© 2026 HIVEN · HIVE-Group</span><a class="hf-site" href="https://hiven.ai.kr/">hiven.ai.kr</a><a class="hf-mail" href="mailto:assist@hiven.ai.kr">assist@hiven.ai.kr</a></div></div></footer>
-<nav class="mvn" aria-label="scroll"><button type="button" data-d="-1" aria-label="Up">▲</button><button type="button" data-d="1" aria-label="Down">▼</button></nav><script id="mvn-js">(function(){var n=document.querySelector(".mvn");if(!n)return;n.querySelectorAll("button").forEach(function(b){var d=+b.dataset.d,t=null,r=null,h=false;function stop(){clearTimeout(t);cancelAnimationFrame(r);r=null}function loop(){window.scrollBy(0,d*14);r=requestAnimationFrame(loop)}b.addEventListener("pointerdown",function(e){e.preventDefault();h=false;t=setTimeout(function(){h=true;loop()},280)});["pointerup","pointerleave","pointercancel"].forEach(function(ev){b.addEventListener(ev,function(){var was=h;stop();if(ev=="pointerup"&&!was){window.scrollTo({top:d<0?0:document.documentElement.scrollHeight,behavior:"smooth"})}h=false})});b.addEventListener("contextmenu",function(e){e.preventDefault()})})})();</script></body>
+<nav class="mvn" aria-label="scroll"><button type="button" data-d="-1" aria-label="Up">▲</button><button type="button" data-d="1" aria-label="Down">▼</button></nav><script id="mvn-js">(function(){var n=document.querySelector(".mvn");if(!n)return;n.querySelectorAll("button").forEach(function(b){var d=+b.dataset.d,t=null,r=null,h=false;function stop(){clearTimeout(t);cancelAnimationFrame(r);r=null}function loop(){window.scrollBy(0,d*14);r=requestAnimationFrame(loop)}b.addEventListener("pointerdown",function(e){e.preventDefault();h=false;t=setTimeout(function(){h=true;loop()},280)});["pointerup","pointerleave","pointercancel"].forEach(function(ev){b.addEventListener(ev,function(){var was=h;stop();if(ev=="pointerup"&&!was){window.scrollTo({top:d<0?0:document.documentElement.scrollHeight,behavior:"smooth"})}h=false})});b.addEventListener("contextmenu",function(e){e.preventDefault()})})})();</script><script id="sm-js">document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var t=document.getElementById(a.getAttribute("href").slice(1));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:"smooth",block:"start"});history.replaceState(null,"",a.getAttribute("href"))});</script></body>
 </html>

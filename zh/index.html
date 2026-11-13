@@ -22,7 +22,7 @@
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#E6E9F5;--sub:#B4BAD3;--faint:#8A90AA;--line:#2A3160;--bg:#0B1036;--bg2:#121947}}
 :root[data-theme="dark"]{--ink:#E6E9F5;--sub:#B4BAD3;--faint:#8A90AA;--line:#2A3160;--bg:#0B1036;--bg2:#121947}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
+html{scroll-padding-top:72px}[id]{scroll-margin-top:72px}
 body{font-family:"Pretendard","PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg);font-size:17px;line-height:1.7;word-break:normal;line-break:strict;-webkit-font-smoothing:antialiased}
 h1,h2,h3,p,li,td,th,span,a,b,div,small{text-wrap-style:pretty}
 .nw,.card p span.nw,.st p span.nw{display:inline;white-space:nowrap}
@@ -155,7 +155,7 @@ footer.hfoot .hf-brand .kn{font-size:15px;line-height:1}
 footer.hfoot .hf-l,footer.hfoot .hf-r{display:contents}
 footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-pol{order:3}footer.hfoot .hf-m{order:4}footer.hfoot .hf-site{order:5}footer.hfoot .hf-mail{order:6}}
 </style>
-<style id="mvn-css">.mvn{position:fixed;right:14px;bottom:50%;transform:translateY(50%);display:flex;flex-direction:column;gap:8px;z-index:50}.mvn button{width:40px;height:40px;border:0;border-radius:50%;background:#2343D7;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;box-shadow:0 4px 12px rgba(35,67,215,.3);-webkit-user-select:none;user-select:none;touch-action:none;-webkit-touch-callout:none}</style><style id="off-css">.card.off h3,.card.off h3 *{color:#9AA0B4 !important}</style></head>
+<style id="mvn-css">.mvn{position:fixed;right:14px;bottom:50%;transform:translateY(50%);display:flex;flex-direction:column;gap:8px;z-index:50}.mvn button{width:40px;height:40px;border:0;border-radius:50%;background:#2343D7;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;box-shadow:0 4px 12px rgba(35,67,215,.3);-webkit-user-select:none;user-select:none;touch-action:none;-webkit-touch-callout:none}</style><style id="off-css">.card.off h3,.card.off h3 *{color:#9AA0B4 !important}</style><style id="dark-h">@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sec:not(.dark):not(.dl) h2,:root:not([data-theme="light"]) .sec:not(.dark):not(.dl) h3{color:#E6E9F5}:root:not([data-theme="light"]) .sec:not(.dark):not(.dl) .wrap>h3{color:#9FB4FF}}:root[data-theme="dark"] .sec:not(.dark):not(.dl) h2,:root[data-theme="dark"] .sec:not(.dark):not(.dl) h3{color:#E6E9F5}:root[data-theme="dark"] .sec:not(.dark):not(.dl) .wrap>h3{color:#9FB4FF}.svc-head{display:flex;gap:20px 28px;align-items:center;justify-content:space-between;flex-wrap:wrap}.svc-head .lead{flex:1 1 520px;min-width:0}.svc-head .btn{flex:0 0 auto;white-space:nowrap}</style></head>
 <body>
 <header class="top"><div class="wrap top-in">
   <a class="brand" href="#top"><img src="../assets/img/hiven-symbol.webp" alt=""><span class="bt">Hi Coffer <span class="nw">AI Agent</span></span></a>
@@ -186,16 +186,16 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
 <section class="sec alt" id="service"><div class="wrap">
   <div class="kicker">Service</div>
   <h2>Hi Coffer AI Agent 做什么</h2>
-  <p class="lead"><span class="ln">查找<span class="nw">数字资产</span>（识别），决定将哪些内容（区分）放入保险库（甄别），以及如何保存（管理·维护）（保险库化）。</span><span class="ln">数字保险库直接 · 间接地保护用户的<span class="nw">数字资产</span>，并使其能够被安全地使用。</span></p>
+  <div class="svc-head"><p class="lead"><span class="ln">查找<span class="nw">数字资产</span>（识别），决定将哪些内容（区分）放入保险库（甄别），以及如何保存（管理·维护）（保险库化）。</span><span class="ln">数字保险库直接 · 间接地保护用户的<span class="nw">数字资产</span>，并使其能够被安全地使用。</span></p><a class="btn p" href="member.html">Hi Coffer 付费服务（订阅）</a></div>
   <div class="steps">
     <div class="st"><b class="n">1</b><h3>识别</h3><p>确认与设备连接的存储介质 · 装置中文件夹及文件的数量/容量/属性以及装置状态。</p></div>
-    <div class="st"><b class="n">2</b><h3>区分</h3><p>按照文件的性质与类型将其划分为标准分类。</p></div>
+    <div class="st"><b class="n">2</b><h3>区分</h3><p>按照文件的性质与类型将其按分类体系（Hi DAM）划分。</p></div>
     <div class="st"><b class="n">3</b><h3>甄别</h3><p>找出重复·旧版本·正本候选·敏感资料的位置。</p></div>
     <div class="st"><b class="n">4</b><h3>管理·维护</h3><p>具有有害属性（钓鱼/诱饵/受污染）以及<span class="nw">遗失</span>/<span class="nw">损失</span>的文件先被隔离，再由用户<span class="nw">进行验证/处置</span>。</p></div>
     <div class="st"><b class="n">5</b><h3>保险库化</h3><p>仅对用户选择/选定的<span class="nw">数字资产</span>（<span class="nw">数据</span>/<span class="nw">信息</span>）进行加密/原件指纹处理<span class="nw">（SHA-256）</span>后保存。<br>※ 保险库密钥仅由用户本人持有/保管。</p></div>
   </div>
   <div class="grid g3">
-    <div class="card"><h3>管理基础 · Hi DAM</h3><p><span>数字资产管理标准分类体系。</span><span>将资产的分类·属性·履历在所有设备上</span><span>以相同（统一）的体系进行管理。</span></p></div>
+    <div class="card"><h3>管理基础 · Hi DAM</h3><p><span>数字资产管理分类体系。</span><span>将资产的分类·属性·履历在所有设备上</span><span>以相同（统一）的体系进行管理。</span></p></div>
     <div class="card"><h3>数字保险库</h3><p><span>仅保存用户选定的资产。</span><span>留存原件确认（指纹）与查阅记录。</span></p></div>
     <div class="card"><h3>对象</h3><p><span>从个人·家庭开始。</span><span>逐步扩展至企业、公共机构。</span></p></div>
   </div>
@@ -203,14 +203,14 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
 <section class="sec" id="agent"><div class="wrap">
   <div class="kicker">Hi Coffer AI Agent</div>
   <h2>代理的作用</h2>
-  <p class="lead"><span class="ln">Hi Coffer AI Agent</span><span class="ln">安装于 PC·笔记本电脑，依据标准分类体系管理设备与装置·介质。</span><span class="ln">对<span class="nw">数字资产</span>与数字保险库进行全面、同步的管理。</span></p>
+  <p class="lead"><span class="ln">Hi Coffer AI Agent</span><span class="ln">安装于 PC·笔记本电脑，依据分类体系（Hi DAM）管理设备与装置·介质。</span><span class="ln">对<span class="nw">数字资产</span>与数字保险库进行全面、同步的管理。</span></p>
   <div class="arch">
     <div class="lab">界面（用户）</div>
     <div class="row"><div class="box">选择规则/体系（Hi DAM） · 执行前预测 · 批准 · 隔离/处置 · 恢复（撤销）</div></div>
     <div class="lab" style="margin-top:18px">Hi Coffer AI Agent = Hi DAM + 数字保险库</div>
     <div class="row g3" style="display:grid;grid-template-columns:repeat(3,1fr)">
       <div class="box core">收集·编目<small>全量目录 · 装置识别</small></div>
-      <div class="box core">分类·自动整理<small>标准体系 · AI 建议</small></div>
+      <div class="box core">分类·自动整理<small>分类体系 · AI 建议</small></div>
       <div class="box core">核对·检索<small>新增·变更·移动·缺失</small></div>
       <div class="box core">保险库<small>加密保存 · 原件/正本确认</small></div>
       <div class="box core">台账·履历<small>以哈希链记录所有变更</small></div>
@@ -219,8 +219,8 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
     <div class="lab" style="margin-top:18px">连接对象</div>
     <div class="row" style="display:grid;grid-template-columns:repeat(3,1fr)">
       <div class="box">PC·笔记本电脑（设备）<small>运行 AI Agent 应用的系统</small><small>* <span class="nw">数字资产</span>管理·恢复（撤销）（免费）</small></div>
-      <div class="box">外置硬盘·USB·存储卡（存储介质/装置）<small>各介质按统一的识别·区分及处理方式进行管理</small><small>* Hi DAM（免费 · 无需注册）</small></div>
-      <div class="box">云端·手机（移动端）<small>* 多渠道·异构设备间同步 · 云端（测试期间不提供）</small></div>
+      <div class="box">外置硬盘·USB·存储卡（存储介质/装置）<small>各介质按统一的识别·区分及处理方式进行管理</small><small>* Hi DAM 基本整理功能（免费）</small></div>
+      <div class="box">云端·手机（移动端）<small>* 多渠道·异构设备间同步 · 云端（付费服务（订阅） · 注册后关联）</small></div>
     </div>
   </div>
   <p class="note"><span class="ln">装置·介质并非通过驱动器盘符，而是通过卷序列号进行区分。</span><span class="ln">即使移除介质后，也可通过留存在 PC 上的目录副本进行查找。</span></p>
@@ -265,13 +265,13 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
 <section class="sec alt" id="plan"><div class="wrap">
   <div class="kicker">Plan</div>
   <h2>使用方式</h2>
-  <p class="lead"><span class="ln">Hi Coffer 高效·有效地管理用户的<span class="nw">数字资产</span>。</span><span class="ln">Hi DAM 任何人无需注册、不限期限均可免费使用。</span><span class="ln">数字保险库（KEYCOVER）在测试期间免费，之后注册会员后以订阅方式提供。</span></p>
+  <p class="lead"><span class="ln">Hi Coffer 高效·有效地管理用户的<span class="nw">数字资产</span>。</span><span class="ln">Hi DAM（分类体系）仅基本整理功能免费，分类体系的应用及附加功能为付费服务（订阅）。</span><span class="ln">Hi Coffer 的付费服务（订阅）对象为 Hi DAM 分类体系的应用及附加服务和数字保险库（KEYCOVER），测试期间免费。</span></p>
   <table class="stk">
     <thead><tr><th style="text-align:center">类别</th><th>提供内容</th><th>形式</th></tr></thead>
     <tbody>
-      <tr><td class="sc" data-label="类别"><b>试用版</b></td><td data-label="提供内容">测试(β)版 — Hi DAM · 数字保险库（KEYCOVER），无需注册</td><td data-label="形式">免费</td></tr>
-      <tr><td class="sc" data-label="类别"><b>商用版</b></td><td data-label="提供内容">依据 Hi DAM 标准分类体系的<span class="nw">数字资产</span>管理及报告<br>不限期限，无需注册</td><td data-label="形式">免费</td></tr>
-      <tr><td class="sc" data-label="类别"><b>订阅</b><span class="sq">（定期）</span></td><td data-label="提供内容">数字保险库（KEYCOVER）服务 — 测试期结束后<br>需要注册会员</td><td data-label="形式">付费</td></tr>
+      <tr><td class="sc" data-label="类别"><b>试用版</b></td><td data-label="提供内容">测试(β)版 — 所有功能免费<br>分类体系的应用及附加服务、数字保险库（KEYCOVER）需要注册（云服务）</td><td data-label="形式">免费</td></tr>
+      <tr><td class="sc" data-label="类别"><b>商用版</b></td><td data-label="提供内容">Hi DAM（分类体系）的基本整理功能<br>无需注册</td><td data-label="形式">免费</td></tr>
+      <tr><td class="sc" data-label="类别"><b>订阅</b><span class="sq">（定期）</span></td><td data-label="提供内容">Hi DAM 分类体系的应用及附加服务 · 数字保险库（KEYCOVER） — 自正式版起<br>需要注册（云服务）</td><td data-label="形式">付费</td></tr>
       <tr><td class="sc" data-label="类别"><b>订阅</b><span class="sq">（特定）</span></td><td data-label="提供内容">保险库高级等级 — 基于区块链的原件证明<br>需要注册会员</td><td data-label="形式">付费</td></tr>
     </tbody>
   </table>
@@ -283,7 +283,7 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
   <div class="kicker">Roadmap</div>
   <h2>发布日程</h2>
   <div class="grid g3">
-    <div class="card"><h3>第 1 阶段 · <span class="tag">2026 年内</span></h3><p><span>Windows PC 测试(β)版</span><span>无需注册即可免费使用 Hi DAM 与数字保险库（KEYCOVER）。</span></p></div>
+    <div class="card"><h3>第 1 阶段 · <span class="tag">2026 年内</span></h3><p><span>Windows PC 测试(β)版</span><span>所有功能均可免费使用，数字保险库功能需要注册。</span></p></div>
     <div class="card"><h3>第 2 阶段 · <span class="tag">2027 年初</span></h3><p><span>Android OS 移动端测试(β)版</span><span>考虑与 PC 联动。</span></p></div>
     <div class="card off"><h3>第 3 阶段 · <span class="tag tbd">另行公告</span></h3><p><span>数字保险库订阅 · 转为付费之后（计划）</span></p></div>
   </div>
@@ -297,5 +297,5 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
 </main>
 
 <footer class="hfoot"><div class="wrap hf"><div class="hf-l"><a class="hf-brand" href="https://hiven.co.kr/zh/#top" aria-label="HIVEN"><img src="/assets/img/hiven-footer-logo.png" alt="HIVEN · 하이븐" width="116" height="19" style="display:block;height:19px;width:auto"></a><a class="hf-pol" href="https://hiven.co.kr/zh/policies.html">条款与政策</a></div><div class="hf-m"><a href="https://hicoffer.ai/zh/">Hi Coffer</a> · <a href="https://hisilver.ai/zh/">Hi Silver</a></div><div class="hf-r"><span class="hf-copy">© 2026 HIVEN · HIVE-Group</span><a class="hf-site" href="https://hiven.ai.kr/">hiven.ai.kr</a><a class="hf-mail" href="mailto:assist@hiven.ai.kr">assist@hiven.ai.kr</a></div></div></footer>
-<nav class="mvn" aria-label="scroll"><button type="button" data-d="-1" aria-label="向上">▲</button><button type="button" data-d="1" aria-label="向下">▼</button></nav><script id="mvn-js">(function(){var n=document.querySelector(".mvn");if(!n)return;n.querySelectorAll("button").forEach(function(b){var d=+b.dataset.d,t=null,r=null,h=false;function stop(){clearTimeout(t);cancelAnimationFrame(r);r=null}function loop(){window.scrollBy(0,d*14);r=requestAnimationFrame(loop)}b.addEventListener("pointerdown",function(e){e.preventDefault();h=false;t=setTimeout(function(){h=true;loop()},280)});["pointerup","pointerleave","pointercancel"].forEach(function(ev){b.addEventListener(ev,function(){var was=h;stop();if(ev=="pointerup"&&!was){window.scrollTo({top:d<0?0:document.documentElement.scrollHeight,behavior:"smooth"})}h=false})});b.addEventListener("contextmenu",function(e){e.preventDefault()})})})();</script></body>
+<nav class="mvn" aria-label="scroll"><button type="button" data-d="-1" aria-label="向上">▲</button><button type="button" data-d="1" aria-label="向下">▼</button></nav><script id="mvn-js">(function(){var n=document.querySelector(".mvn");if(!n)return;n.querySelectorAll("button").forEach(function(b){var d=+b.dataset.d,t=null,r=null,h=false;function stop(){clearTimeout(t);cancelAnimationFrame(r);r=null}function loop(){window.scrollBy(0,d*14);r=requestAnimationFrame(loop)}b.addEventListener("pointerdown",function(e){e.preventDefault();h=false;t=setTimeout(function(){h=true;loop()},280)});["pointerup","pointerleave","pointercancel"].forEach(function(ev){b.addEventListener(ev,function(){var was=h;stop();if(ev=="pointerup"&&!was){window.scrollTo({top:d<0?0:document.documentElement.scrollHeight,behavior:"smooth"})}h=false})});b.addEventListener("contextmenu",function(e){e.preventDefault()})})})();</script><script id="sm-js">document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var t=document.getElementById(a.getAttribute("href").slice(1));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:"smooth",block:"start"});history.replaceState(null,"",a.getAttribute("href"))});</script></body>
 </html>

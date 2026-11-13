@@ -22,7 +22,7 @@
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#E6E9F5;--sub:#B4BAD3;--faint:#8A90AA;--line:#2A3160;--bg:#0B1036;--bg2:#121947}}
 :root[data-theme="dark"]{--ink:#E6E9F5;--sub:#B4BAD3;--faint:#8A90AA;--line:#2A3160;--bg:#0B1036;--bg2:#121947}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
+html{scroll-padding-top:72px}[id]{scroll-margin-top:72px}
 body{font-family:"Pretendard",system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg);font-size:17px;line-height:1.7;word-break:keep-all;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;height:auto;display:block}
@@ -155,7 +155,7 @@ footer.hfoot .hf-brand .kn{font-size:15px;line-height:1}
 footer.hfoot .hf-l,footer.hfoot .hf-r{display:contents}
 footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-pol{order:3}footer.hfoot .hf-m{order:4}footer.hfoot .hf-site{order:5}footer.hfoot .hf-mail{order:6}}
 </style>
-<style id="mvn-css">.mvn{position:fixed;right:14px;bottom:50%;transform:translateY(50%);display:flex;flex-direction:column;gap:8px;z-index:50}.mvn button{width:40px;height:40px;border:0;border-radius:50%;background:#2343D7;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;box-shadow:0 4px 12px rgba(35,67,215,.3);-webkit-user-select:none;user-select:none;touch-action:none;-webkit-touch-callout:none}</style><style id="off-css">.card.off h3,.card.off h3 *{color:#9AA0B4 !important}</style></head>
+<style id="mvn-css">.mvn{position:fixed;right:14px;bottom:50%;transform:translateY(50%);display:flex;flex-direction:column;gap:8px;z-index:50}.mvn button{width:40px;height:40px;border:0;border-radius:50%;background:#2343D7;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;box-shadow:0 4px 12px rgba(35,67,215,.3);-webkit-user-select:none;user-select:none;touch-action:none;-webkit-touch-callout:none}</style><style id="off-css">.card.off h3,.card.off h3 *{color:#9AA0B4 !important}</style><style id="dark-h">@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sec:not(.dark):not(.dl) h2,:root:not([data-theme="light"]) .sec:not(.dark):not(.dl) h3{color:#E6E9F5}:root:not([data-theme="light"]) .sec:not(.dark):not(.dl) .wrap>h3{color:#9FB4FF}}:root[data-theme="dark"] .sec:not(.dark):not(.dl) h2,:root[data-theme="dark"] .sec:not(.dark):not(.dl) h3{color:#E6E9F5}:root[data-theme="dark"] .sec:not(.dark):not(.dl) .wrap>h3{color:#9FB4FF}.svc-head{display:flex;gap:20px 28px;align-items:center;justify-content:space-between;flex-wrap:wrap}.svc-head .lead{flex:1 1 520px;min-width:0}.svc-head .btn{flex:0 0 auto;white-space:nowrap}</style></head>
 <body>
 <header class="top"><div class="wrap top-in">
   <a class="brand" href="#top"><img src="../assets/img/hiven-symbol.webp" alt=""><span class="bt">Hi Coffer <span class="nw">AI Agent</span></span></a>
@@ -186,16 +186,16 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
 <section class="sec alt" id="service"><div class="wrap">
   <div class="kicker">Service</div>
   <h2>Что делает Hi Coffer AI Agent</h2>
-  <p class="lead"><span class="ln">Находит цифровые активы (идентификация), определяет, что (классификация) поместить в&nbsp;хранилище (различение) и&nbsp;как хранить (управление&nbsp;· поддержка) (помещение в&nbsp;хранилище).</span><span class="ln">Цифровое хранилище прямо и&nbsp;косвенно защищает цифровые активы пользователя и&nbsp;обеспечивает их безопасное использование.</span></p>
+  <div class="svc-head"><p class="lead"><span class="ln">Находит цифровые активы (идентификация), определяет, что (классификация) поместить в&nbsp;хранилище (различение) и&nbsp;как хранить (управление&nbsp;· поддержка) (помещение в&nbsp;хранилище).</span><span class="ln">Цифровое хранилище прямо и&nbsp;косвенно защищает цифровые активы пользователя и&nbsp;обеспечивает их безопасное использование.</span></p><a class="btn p" href="member.html">Платная услуга Hi Coffer (подписка)</a></div>
   <div class="steps">
     <div class="st"><b class="n">1</b><h3>Идентификация</h3><p>Проверяются количество/объём/атрибуты папок и&nbsp;файлов на носителях и&nbsp;устройствах, подключённых к&nbsp;устройству, а&nbsp;также состояние устройства.</p></div>
-    <div class="st"><b class="n">2</b><h3>Классификация</h3><p>Файлы распределяются по стандартным категориям в&nbsp;зависимости от характера и&nbsp;типа.</p></div>
+    <div class="st"><b class="n">2</b><h3>Классификация</h3><p>Файлы распределяются по системе классификации (Hi DAM) в&nbsp;зависимости от характера и&nbsp;типа.</p></div>
     <div class="st"><b class="n">3</b><h3>Различение</h3><p>Выявляются дубликаты, старые версии, кандидаты в&nbsp;подлинные копии и&nbsp;места хранения конфиденциальных данных.</p></div>
     <div class="st"><b class="n">4</b><h3>Управление&nbsp;· поддержка</h3><p>Объекты с&nbsp;вредоносными атрибутами (фишинг/приманка/повреждённые) и&nbsp;утерянные/повреждённые объекты изолируются, после чего пользователь проверяет их/принимает меры.</p></div>
     <div class="st"><b class="n">5</b><h3>Помещение в&nbsp;хранилище</h3><p>Только выбранные/отобранные пользователем цифровые активы (данные/информация) хранятся с&nbsp;шифрованием/отпечатком оригинала (SHA-256).<br>※ Ключ хранилища принадлежит/хранится только у&nbsp;пользователя.</p></div>
   </div>
   <div class="grid g3">
-    <div class="card"><h3>Основа управления&nbsp;· Hi DAM</h3><p><span>Стандартная система классификации для управления цифровыми активами.</span><span>Классификация, атрибуты и&nbsp;история активов на всех устройствах</span><span>ведутся по одной (единой) системе.</span></p></div>
+    <div class="card"><h3>Основа управления&nbsp;· Hi DAM</h3><p><span>Система классификации для управления цифровыми активами.</span><span>Классификация, атрибуты и&nbsp;история активов на всех устройствах</span><span>ведутся по одной (единой) системе.</span></p></div>
     <div class="card"><h3>Цифровое хранилище</h3><p><span>Хранятся только активы, выбранные пользователем.</span><span>Сохраняются подтверждение оригинала (отпечаток) и&nbsp;журнал просмотра.</span></p></div>
     <div class="card"><h3>Для кого</h3><p><span>Начинаем с&nbsp;частных лиц и&nbsp;семей.</span><span>Далее расширяемся на компании и&nbsp;государственные учреждения.</span></p></div>
   </div>
@@ -203,14 +203,14 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
 <section class="sec" id="agent"><div class="wrap">
   <div class="kicker">Hi Coffer AI Agent</div>
   <h2>Роль агента</h2>
-  <p class="lead"><span class="ln">Hi Coffer AI Agent</span><span class="ln">устанавливается на ПК и&nbsp;ноутбуки и&nbsp;управляет устройствами, периферией и&nbsp;носителями по стандартной системе классификации.</span><span class="ln">Он комплексно и&nbsp;одновременно управляет цифровыми активами и&nbsp;цифровым хранилищем.</span></p>
+  <p class="lead"><span class="ln">Hi Coffer AI Agent</span><span class="ln">устанавливается на ПК и&nbsp;ноутбуки и&nbsp;управляет устройствами, периферией и&nbsp;носителями по системе классификации.</span><span class="ln">Он комплексно и&nbsp;одновременно управляет цифровыми активами и&nbsp;цифровым хранилищем.</span></p>
   <div class="arch">
     <div class="lab">Экран (пользователь)</div>
     <div class="row"><div class="box">Выбор правил/системы (Hi DAM)&nbsp;· Прогноз до выполнения&nbsp;· Утверждение&nbsp;· Изоляция/меры&nbsp;· Восстановление (отмена)</div></div>
     <div class="lab" style="margin-top:18px">Hi Coffer AI Agent = Hi DAM + Цифровое хранилище</div>
     <div class="row g3" style="display:grid;grid-template-columns:repeat(3,1fr)">
       <div class="box core">Сбор&nbsp;· инвентаризация<small>Полный перечень&nbsp;· Идентификация устройств</small></div>
-      <div class="box core">Классификация&nbsp;· автоупорядочивание<small>Стандартная система&nbsp;· Предложения ИИ</small></div>
+      <div class="box core">Классификация&nbsp;· автоупорядочивание<small>Система классификации&nbsp;· Предложения ИИ</small></div>
       <div class="box core">Сверка&nbsp;· поиск<small>Добавление&nbsp;· изменение&nbsp;· перемещение&nbsp;· пропуск</small></div>
       <div class="box core">Хранилище<small>Зашифрованное хранение&nbsp;· Проверка оригинала/подлинной копии</small></div>
       <div class="box core">Реестр&nbsp;· история<small>Все изменения записываются в&nbsp;цепочку хешей</small></div>
@@ -219,8 +219,8 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
     <div class="lab" style="margin-top:18px">Подключения</div>
     <div class="row" style="display:grid;grid-template-columns:repeat(3,1fr)">
       <div class="box">ПК&nbsp;· ноутбук (устройство)<small>Система, на которой работает приложение AI Agent</small><small>* Управление&nbsp;· восстановление (отмена) цифровых активов (Бесплатно)</small></div>
-      <div class="box">Внешний диск&nbsp;· USB&nbsp;· карта памяти (носители/устройства)<small>Управление на основе единой идентификации, классификации и&nbsp;обработки для каждого носителя</small><small>* Hi DAM (Бесплатно · без регистрации)</small></div>
-      <div class="box">Облако&nbsp;· мобильный телефон (мобильные)<small>* Многоканальная&nbsp;· кроссплатформенная синхронизация&nbsp;· Облако (в&nbsp;бета-период не&nbsp;предоставляется)</small></div>
+      <div class="box">Внешний диск&nbsp;· USB&nbsp;· карта памяти (носители/устройства)<small>Управление на основе единой идентификации, классификации и&nbsp;обработки для каждого носителя</small><small>* Базовая функция упорядочивания Hi DAM (Бесплатно)</small></div>
+      <div class="box">Облако&nbsp;· мобильный телефон (мобильные)<small>* Многоканальная&nbsp;· кроссплатформенная синхронизация&nbsp;· Облако (платная услуга по подписке · подключается после регистрации)</small></div>
     </div>
   </div>
   <p class="note"><span class="ln">Устройства и&nbsp;носители различаются по серийному номеру тома, а&nbsp;не по букве диска.</span><span class="ln">Даже после отключения носителя его можно найти по копии перечня, сохранённой на ПК.</span></p>
@@ -265,13 +265,13 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
 <section class="sec alt" id="plan"><div class="wrap">
   <div class="kicker">Plan</div>
   <h2>Тарифы</h2>
-  <p class="lead"><span class="ln">Hi Coffer эффективно и&nbsp;результативно управляет цифровыми активами пользователя.</span><span class="ln">Hi DAM может использовать каждый бесплатно, без регистрации и&nbsp;без ограничения срока.</span><span class="ln">Цифровое хранилище (KEYCOVER) бесплатно в&nbsp;бета-период, затем предоставляется по подписке после регистрации.</span></p>
+  <p class="lead"><span class="ln">Hi Coffer эффективно и&nbsp;результативно управляет цифровыми активами пользователя.</span><span class="ln">В&nbsp;Hi DAM (система классификации) бесплатна только базовая функция упорядочивания; применение системы классификации и&nbsp;дополнительные функции — платная услуга (подписка).</span><span class="ln">Платная услуга (подписка) Hi Coffer распространяется на применение системы классификации Hi DAM и&nbsp;дополнительные услуги, а также на цифровое хранилище (KEYCOVER); в&nbsp;бета-период они бесплатны.</span></p>
   <table class="stk">
     <thead><tr><th style="text-align:center">Тип</th><th>Что предоставляется</th><th>Условия</th></tr></thead>
     <tbody>
-      <tr><td class="sc" data-label="Тип"><b>Пробная версия</b></td><td data-label="Что предоставляется">Бета-версия (β) — Hi DAM · цифровое хранилище (KEYCOVER), без регистрации</td><td data-label="Условия">Бесплатно</td></tr>
-      <tr><td class="sc" data-label="Тип"><b>Коммерческая версия</b></td><td data-label="Что предоставляется">Управление цифровыми активами и&nbsp;отчётность по стандартной классификации Hi DAM<br>Без регистрации, без ограничения срока</td><td data-label="Условия">Бесплатно</td></tr>
-      <tr><td class="sc" data-label="Тип"><b>Подписка</b><span class="sq">(регулярная)</span></td><td data-label="Что предоставляется">Сервис цифрового хранилища (KEYCOVER) — после бета-периода<br>Требуется регистрация</td><td data-label="Условия">Платно</td></tr>
+      <tr><td class="sc" data-label="Тип"><b>Пробная версия</b></td><td data-label="Что предоставляется">Бета-версия (β) — все функции бесплатны<br>Для применения системы классификации, дополнительных услуг и цифрового хранилища (KEYCOVER) требуется регистрация (облачный сервис)</td><td data-label="Условия">Бесплатно</td></tr>
+      <tr><td class="sc" data-label="Тип"><b>Коммерческая версия</b></td><td data-label="Что предоставляется">Базовая функция упорядочивания Hi DAM (система классификации)<br>Без регистрации</td><td data-label="Условия">Бесплатно</td></tr>
+      <tr><td class="sc" data-label="Тип"><b>Подписка</b><span class="sq">(регулярная)</span></td><td data-label="Что предоставляется">Применение системы классификации Hi DAM и&nbsp;дополнительные услуги · цифровое хранилище (KEYCOVER) — начиная с коммерческой версии<br>Требуется регистрация (облачный сервис)</td><td data-label="Условия">Платно</td></tr>
       <tr><td class="sc" data-label="Тип"><b>Подписка</b><span class="sq">(специальная)</span></td><td data-label="Что предоставляется">Расширенный уровень хранилища — подтверждение оригинала на основе блокчейна<br>Требуется регистрация</td><td data-label="Условия">Платно</td></tr>
     </tbody>
   </table>
@@ -283,7 +283,7 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
   <div class="kicker">Roadmap</div>
   <h2>График выпуска</h2>
   <div class="grid g3">
-    <div class="card"><h3>Этап 1&nbsp;· <span class="tag">В&nbsp;2026 году</span></h3><p><span>Бета-версия (β) для ПК с&nbsp;Windows</span><span>Hi DAM и&nbsp;цифровое хранилище (KEYCOVER) доступны бесплатно без регистрации.</span></p></div>
+    <div class="card"><h3>Этап 1&nbsp;· <span class="tag">В&nbsp;2026 году</span></h3><p><span>Бета-версия (β) для ПК с&nbsp;Windows</span><span>Все функции доступны бесплатно; для функции цифрового хранилища требуется регистрация.</span></p></div>
     <div class="card"><h3>Этап 2&nbsp;· <span class="tag">Начало 2027 года</span></h3><p><span>Мобильная бета-версия (β) для Android OS</span><span>Рассматривается интеграция с&nbsp;ПК.</span></p></div>
     <div class="card off"><h3>Этап 3&nbsp;· <span class="tag tbd">Будет объявлено</span></h3><p><span>Подписка на цифровое хранилище&nbsp;· после перехода на платную модель (планируется)</span></p></div>
   </div>
@@ -297,5 +297,5 @@ footer.hfoot .hf-brand{order:1}footer.hfoot .hf-copy{order:2}footer.hfoot .hf-po
 </main>
 
 <footer class="hfoot"><div class="wrap hf"><div class="hf-l"><a class="hf-brand" href="https://hiven.co.kr/ru/#top" aria-label="HIVEN"><img src="/assets/img/hiven-footer-logo.png" alt="HIVEN · 하이븐" width="116" height="19" style="display:block;height:19px;width:auto"></a><a class="hf-pol" href="https://hiven.co.kr/ru/policies.html">Условия и политики</a></div><div class="hf-m"><a href="https://hicoffer.ai/ru/">Hi Coffer</a> · <a href="https://hisilver.ai/ru/">Hi Silver</a></div><div class="hf-r"><span class="hf-copy">© 2026 HIVEN · HIVE-Group</span><a class="hf-site" href="https://hiven.ai.kr/">hiven.ai.kr</a><a class="hf-mail" href="mailto:assist@hiven.ai.kr">assist@hiven.ai.kr</a></div></div></footer>
-<nav class="mvn" aria-label="scroll"><button type="button" data-d="-1" aria-label="Вверх">▲</button><button type="button" data-d="1" aria-label="Вниз">▼</button></nav><script id="mvn-js">(function(){var n=document.querySelector(".mvn");if(!n)return;n.querySelectorAll("button").forEach(function(b){var d=+b.dataset.d,t=null,r=null,h=false;function stop(){clearTimeout(t);cancelAnimationFrame(r);r=null}function loop(){window.scrollBy(0,d*14);r=requestAnimationFrame(loop)}b.addEventListener("pointerdown",function(e){e.preventDefault();h=false;t=setTimeout(function(){h=true;loop()},280)});["pointerup","pointerleave","pointercancel"].forEach(function(ev){b.addEventListener(ev,function(){var was=h;stop();if(ev=="pointerup"&&!was){window.scrollTo({top:d<0?0:document.documentElement.scrollHeight,behavior:"smooth"})}h=false})});b.addEventListener("contextmenu",function(e){e.preventDefault()})})})();</script></body>
+<nav class="mvn" aria-label="scroll"><button type="button" data-d="-1" aria-label="Вверх">▲</button><button type="button" data-d="1" aria-label="Вниз">▼</button></nav><script id="mvn-js">(function(){var n=document.querySelector(".mvn");if(!n)return;n.querySelectorAll("button").forEach(function(b){var d=+b.dataset.d,t=null,r=null,h=false;function stop(){clearTimeout(t);cancelAnimationFrame(r);r=null}function loop(){window.scrollBy(0,d*14);r=requestAnimationFrame(loop)}b.addEventListener("pointerdown",function(e){e.preventDefault();h=false;t=setTimeout(function(){h=true;loop()},280)});["pointerup","pointerleave","pointercancel"].forEach(function(ev){b.addEventListener(ev,function(){var was=h;stop();if(ev=="pointerup"&&!was){window.scrollTo({top:d<0?0:document.documentElement.scrollHeight,behavior:"smooth"})}h=false})});b.addEventListener("contextmenu",function(e){e.preventDefault()})})})();</script><script id="sm-js">document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var t=document.getElementById(a.getAttribute("href").slice(1));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:"smooth",block:"start"});history.replaceState(null,"",a.getAttribute("href"))});</script></body>
 </html>

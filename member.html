@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head><meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>유료서비스(구독) · 회원 · Hi Coffer AI Agent</title>
+<link rel="icon" href="assets/img/favicon.png">
+<style>
+@font-face{font-family:"Pretendard";font-weight:400;font-display:swap;src:url(assets/fonts/Pretendard-Regular.woff2?v=20261024f) format("woff2")}@font-face{font-family:"Pretendard";font-weight:600;font-display:swap;src:url(assets/fonts/Pretendard-SemiBold.woff2?v=20261024f) format("woff2")}@font-face{font-family:"Pretendard";font-weight:700;font-display:swap;src:url(assets/fonts/Pretendard-Bold.woff2?v=20261024f) format("woff2")}@font-face{font-family:"Pretendard";font-weight:800;font-display:swap;src:url(assets/fonts/Pretendard-ExtraBold.woff2?v=20261024f) format("woff2")}
+:root{--navy:#10184A;--ink:#1A1F36;--sub:#4A5070;--faint:#7A8099;--line:#E3E6F0;--bg:#fff;--bg2:#F5F7FC;--c1:#088CF5;--c2:#2343D7;--c3:#7711FC;--grad:linear-gradient(120deg,var(--c1),var(--c2) 55%,var(--c3));--err:#B3261E;--dis:#8A90A0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#E6E9F5;--sub:#B4BAD3;--faint:#8A90AA;--line:#2A3160;--bg:#0B1036;--bg2:#121947;--err:#FF8A80;--dis:#5A6088;color-scheme:dark}}
+:root[data-theme="dark"]{--ink:#E6E9F5;--sub:#B4BAD3;--faint:#8A90AA;--line:#2A3160;--bg:#0B1036;--bg2:#121947;--err:#FF8A80;--dis:#5A6088;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Pretendard",system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg);font-size:16px;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}:lang(ja),:lang(zh-Hans){word-break:normal}
+a{color:inherit}
+.wrap{max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top{background:var(--navy);color:#fff;padding-block:14px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;text-decoration:none}
+.brand img{height:28px;width:28px}.brand span{color:#9AA3C7}
+.back{font-size:14px;color:#C9D2F5}
+.hero{background:var(--navy);color:#fff;padding-block:28px 36px}
+.hero h1{font-size:clamp(24px,4vw,32px);line-height:1.3;font-weight:800;text-wrap:balance}
+.hero p{margin-top:12px;color:#C9D2F5}
+main{padding-block:28px 56px;display:flex;flex-direction:column;gap:18px}
+.box{border:1px solid var(--line);border-radius:14px;padding:20px;background:var(--bg2)}
+.box h2{font-size:19px;font-weight:800;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.box h2 small{min-width:0;font-size:14px;font-weight:600;color:var(--sub)}
+.note{font-size:14px;color:var(--sub);margin-top:6px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+button{font:inherit;cursor:pointer}
+.b{min-height:46px;padding:6px 22px;border-radius:999px;font-weight:700;border:1px solid var(--c2);background:transparent;color:var(--ink)}
+.b.p{background:var(--grad);color:#fff;border:0}
+.b:disabled{background:var(--dis);color:#fff;border:0;cursor:not-allowed}
+.b.s{min-height:32px;padding:2px 14px;font-size:14px;margin-left:auto}
+.sm{display:flex;gap:10px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line)}
+.sm:first-of-type{border-top:0;margin-top:8px}
+.sm input{margin-top:6px;width:18px;height:18px;flex:0 0 auto}
+.sm b{display:block}.sm span{font-size:14px;color:var(--sub)}
+.f{display:block;margin-top:14px}
+.f>span{display:block;font-weight:700}
+.f em{font-style:normal;font-size:13px;font-weight:600;color:var(--err);margin-left:6px}
+.f em.o{color:var(--faint)}
+.f input[type=text],.f input[type=password]{width:100%;max-width:440px;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;margin-top:4px}
+.f input[type=checkbox]{width:18px;height:18px;margin-right:8px;vertical-align:-3px}
+.f small{display:block;font-size:13px;color:var(--sub)}
+#sf.off{opacity:.55}
+.msg{margin-top:12px;font-weight:700;color:var(--err)}
+.mm h3{font-size:16px;font-weight:800;margin-top:14px;color:var(--c1)}
+.mm div{margin:6px 0 0 12px}.mm div span{font-size:14px;color:var(--sub);margin-left:6px}
+.foot{font-size:14px;color:var(--sub);display:flex;flex-direction:column;gap:4px}
+[hidden]{display:none!important}
+</style></head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="https://hicoffer.ai/"><img src="assets/img/favicon.png" alt="">Hi Coffer <span>AI Agent</span></a><a class="back" href="https://hicoffer.ai/">Hi Coffer AI Agent로 돌아가기</a></div></header>
+<section class="hero"><div class="wrap"><h1>Hi Coffer 유료서비스(구독)</h1><p>받을 서비스를 체크하면 회원가입 창이 켜집니다.<br>베타 버전(시험 배포)은 모든 기능을 무료로 이용 가능하며, 디지털금고 기능은 회원가입이 필요합니다.</p></div></section>
+<main class="wrap">
+<section class="box" id="gate"><h2>① 모드 고르기</h2><p class="note">기본 정리만 쓰려면 기본 모드, 분류 체계 적용 · 부가서비스 · 디지털금고를 쓰려면 구독 서비스 모드입니다.</p><div class="btns"><button class="b" type="button" id="bBasic">기본 모드</button><button class="b p" type="button" id="bSub">구독 서비스 모드</button></div></section>
+<section class="box" id="modes" hidden><h2>② 서비스 모드 <small id="state"></small><button class="b s" type="button" id="bReset">처음으로</button></h2><div id="smList"></div></section>
+<section class="box off" id="sf" hidden><h2>③ 회원가입 <small id="net"></small></h2><form id="form" novalidate autocomplete="off"><div id="sfList"></div><p class="note">받지 않는 것: 주민등록번호 · 생년월일 · 전화번호 · 주소 / 카드·계좌 번호 / 파일·금고 내용·금고 키·복구 QR</p><p class="note"><a href="https://hiven.co.kr/policies.html" target="_blank" rel="noopener">이용약관 및 정책 전문 보기</a></p><div class="btns"><button class="b p" type="submit" id="bJoin" disabled>가입하기</button></div><p class="msg" id="msg" hidden></p></form></section>
+<section class="box mm" id="menu" hidden><h2>④ 가입 뒤 메뉴 <small>회원가입 뒤 쓸 수 있습니다.</small></h2><div id="mmList"></div></section>
+<div class="foot"><span>Hi Coffer AI Agent 앱의 유료서비스(구독)는 회원가입 후 클라우드 서비스로 연동됩니다.</span><span>※ 책임지는 복구(원복)는 구독 서비스에만 해당합니다.</span><span>※ 베타 버전(시험 배포)은 디지털금고 및 데이터 복구 시 각 사용자 환경에 따라 데이터 원복이 보장되지 않습니다.</span></div>
+</main>
+<script>
+(function(){
+var L={"SM": [["SM-01", "기본 정리", "중복 데이터 정리 · 폴더·파일 정리 · 복구(되돌리기)", 0, "무료", "무료"], ["SM-02", "Hi DAM 분류 체계 적용", "분류 체계에 따라 분류·명명·정리를 자동으로 적용", 1, "무료", "유료서비스(구독)"], ["SM-03", "부가서비스 · HiAad", "광고·유해 파일 차단 규칙의 지속 업데이트", 1, "무료", "유료서비스(구독)"], ["SM-04", "부가서비스 · 저장 매체 동기화·미러링", "드라이브 · 외장 · USB와 기기 사이 동기화", 1, "무료", "유료서비스(구독)"], ["SM-05", "디지털금고(KEYCOVER)", "고른 자산을 금고에 암호화해 보관, 원본 확인", 1, "무료", "유료서비스(구독)"], ["SM-06", "책임지는 복구(원복)", "원상태 그대로 복구", 1, "보장 안 됨", "유료서비스(구독)"], ["SM-07", "사용자 대시보드 · 기기 관리", "내 기기의 자산 구성과 관리 상태 보기", 1, "무료", "유료서비스(구독)"]], "SF": [["email", "이메일 주소", "text", 1, "계정 구분 · 본인 확인 · 꼭 필요한 안내"], ["pw", "비밀번호(10자 이상)", "password", 1, "되돌릴 수 없게 바꾼 값만 저장합니다"], ["age", "만 19세 이상입니다", "check", 1, "생년월일은 받지 않습니다"], ["tos", "이용약관에 동의합니다", "check", 1, ""], ["pi", "개인정보 수집·이용에 동의합니다", "check", 1, "항목: 이메일 주소, 비밀번호(바꾼 값), 가입 기기 표지·이름, 가입 일시 · 탈퇴하면 5일 이내 파기"], ["name", "부르는 이름", "text", 0, "안내 문구의 호칭"], ["mail", "안내 메일을 받습니다", "check", 0, ""]], "MM": [["회원/마이홈", [["내 서비스 모드", "체크한 모드를 보고 켜고 끕니다"], ["내 기기 · 저장 매체", "가입한 기기와 이어진 저장 매체"], ["구독", "베타 기간 무료 · 상용 버전의 구독 요금·결제 조건은 출시 전에 별도로 공지합니다"], ["디지털금고 · 복구 이력", "금고 상태와 키 위치 안내(키 값은 보여 주지 않습니다)"]]], ["개인정보", [["내 정보 보기 · 고치기", "이메일 · 부르는 이름 · 안내 메일 받기"], ["비밀번호 바꾸기", ""], ["동의 내역 · 동의 거두기", "동의한 약관·방침의 판과 때"], ["회원 탈퇴", "가입 정보는 지체 없이(5일 이내) 파기합니다. 기기 안의 파일과 금고는 그대로 남습니다"]]], ["도움", [["도움 요청 · 의견 보내기", "보고서를 미리 보고 보냅니다(선택 동의)"]]]], "now": "지금", "sub": "구독 서비스 모드", "basic": "기본 모드", "member0": "회원 아님", "beta": "베타", "comm": "상용", "nosign": "회원가입 필요 없음", "net0": "인터넷 연결 안 됨 · 인터넷(유·무선 통신)이 연결되면 다시 확인해 주십시오.", "net1": "인터넷 연결됨 · 가입 서버 열기 전(지금은 어떤 값도 보내지 않습니다)", "off": "가입이 필요한 서비스 모드를 체크하면 켜집니다.", "req": "필수", "opt": "선택", "e1": "이메일 주소를 꼴에 맞게 적어 주십시오.", "e2": "비밀번호는 10자 이상이어야 합니다.", "e3": "필수 확인 · 동의 세 칸에 체크해 주십시오.", "closed": "가입 서버 열기 전입니다. 적으신 값은 어디에도 보내거나 저장하지 않았습니다. 가입이 열리면 이 쪽에서 알립니다.", "fail": "가입 서버에 닿지 못했습니다. 잠시 뒤 다시 해 주십시오.", "sent": "확인 메일을 보냈습니다. 메일의 확인 주소를 누르면 가입이 끝납니다."};
+/* 인터넷 연동: 가입 주소. 빈 값이면 「가입 서버 열기 전」이며 어떤 값도 보내지 않는다. */
+var API='';
+var $=function(i){return document.getElementById(i)},st={am:'',sm:{}};
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function need(){return L.SM.some(function(r){return r[3]&&st.sm[r[0]]})}
+function draw(){
+ var on=!!st.am;$('gate').hidden=on;$('modes').hidden=!on;$('sf').hidden=!on;$('menu').hidden=!on;if(!on)return;
+ var n=need();$('state').textContent=L.now+' '+(n?L.sub:L.basic)+' · '+L.member0;
+ $('smList').innerHTML=L.SM.map(function(r){var fix=!r[3],c=fix||st.sm[r[0]];return '<label class="sm"><input type="checkbox" data-sm="'+r[0]+'"'+(c?' checked':'')+(fix?' disabled':'')+'><span><b>'+esc(r[1])+'</b>'+esc(r[2])+' · '+L.beta+' '+esc(r[4])+' · '+L.comm+' '+esc(r[5])+(fix?' · '+L.nosign:'')+'</span></label>'}).join('');
+ $('sf').className='box'+(n?'':' off');$('net').textContent=n?(navigator.onLine===false?L.net0:L.net1):L.off;
+ [].forEach.call($('form').querySelectorAll('input'),function(x){x.disabled=!n});$('bJoin').disabled=!n||navigator.onLine===false;
+}
+$('sfList').innerHTML=L.SF.map(function(r){var t='<em'+(r[3]?'':' class="o"')+'>'+(r[3]?L.req:L.opt)+'</em>';return r[2]==='check'?'<label class="f"><span><input type="checkbox" name="'+r[0]+'">'+esc(r[1])+t+'</span><small>'+esc(r[4])+'</small></label>':'<label class="f"><span>'+esc(r[1])+t+'</span><input type="'+r[2]+'" name="'+r[0]+'" autocomplete="off"><small>'+esc(r[4])+'</small></label>'}).join('');
+$('mmList').innerHTML=L.MM.map(function(g){return '<h3>'+esc(g[0])+'</h3>'+g[1].map(function(r){return '<div><b>'+esc(r[0])+'</b><span>'+esc(r[1])+'</span></div>'}).join('')}).join('');
+$('bBasic').onclick=function(){st.am='basic';st.sm={};draw()};
+$('bSub').onclick=function(){st.am='sub';st.sm={};L.SM.forEach(function(r){if(r[3])st.sm[r[0]]=true});draw()};
+$('bReset').onclick=function(){st.am='';st.sm={};$('form').reset();$('msg').hidden=true;draw()};
+$('smList').addEventListener('change',function(e){var id=e.target.getAttribute('data-sm');if(!id)return;st.sm[id]=e.target.checked;$('msg').hidden=true;draw()});
+window.addEventListener('online',draw);window.addEventListener('offline',draw);
+function say(t){$('msg').textContent=t;$('msg').hidden=false}
+$('form').addEventListener('submit',function(e){e.preventDefault();var f=e.target,em=f.email.value.trim(),pw=f.pw.value;
+ if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))return say(L.e1);if(pw.length<10)return say(L.e2);if(!(f.age.checked&&f.tos.checked&&f.pi.checked))return say(L.e3);
+ if(!API){f.pw.value='';return say(L.closed)}
+ var body=JSON.stringify({email:em,password:pw,name:f.name.value.trim(),mail:f.mail.checked,modes:L.SM.filter(function(r){return r[3]&&st.sm[r[0]]}).map(function(r){return r[0]}),lang:document.documentElement.lang});f.pw.value='';
+ fetch(API+'/api/member/signup',{method:'POST',headers:{'Content-Type':'application/json'},body:body}).then(function(r){say(r.ok?L.sent:L.fail)}).catch(function(){say(L.fail)});
+});
+draw();
+})();
+</script>
+</body></html>
